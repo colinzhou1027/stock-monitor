@@ -1,0 +1,54 @@
+{
+  "latest": {
+    "year": 2026,
+    "month": 3,
+    "update_time": "2026-04-03 01:03:53",
+    "avg_change": -12.15,
+    "stock_data": {
+      "462870": {
+        "name": "Shift Up",
+        "change_percent": -12.5,
+        "start_price": 36800,
+        "end_price": 32200
+      },
+      "259960": {
+        "name": "Krafton",
+        "change_percent": -8.3,
+        "start_price": 270000,
+        "end_price": 247500
+      },
+      "036570": {
+        "name": "NCsoft",
+        "change_percent": -15.2,
+        "start_price": 251000,
+        "end_price": 213000
+      },
+      "251270": {
+        "name": "Netmarble",
+        "change_percent": -10.8,
+        "start_price": 55000,
+        "end_price": 49000
+      },
+      "225570": {
+        "name": "Nexon Games",
+        "change_percent": -7.6,
+        "start_price": 12380,
+        "end_price": 11440
+      },
+      "263750": {
+        "name": "Pearl Abyss",
+        "change_percent": -18.5,
+        "start_price": 81200,
+        "end_price": 66200
+      }
+    },
+    "index_data": {
+      "name": "KOSPI 200",
+      "change_percent": -9.2,
+      "start_value": 86120,
+      "end_value": 78190
+    },
+    "ai_analysis": "2026年3月韩国游戏股整体表现疲软，受全球科技股回调及韩国市场情绪影响，主要游戏公司股价普遍下跌。NCsoft 跌幅最大（-15.2%），主要因新游戏上线后表现不及预期。Pearl Abyss 同样大幅下挫（-18.5%），市场对其《黑色沙漠》后续内容更新持观望态度。Shift Up 跌幅相对温和（-12.5%），《星鸣特攻》虽然面临挑战但公司积极调整策略。建议投资者关注4月财报季及新游戏发布计划。"
+  },
+  "history": []
+}

@@ -1,0 +1,67 @@
+# 环境变量和密钥
+.env
+.env.local
+.env.*.local
+*.key
+*.pem
+
+# Python 虚拟环境
+venv/
+.venv/
+env/
+ENV/
+
+# Python 缓存
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# 日志文件
+logs/
+*.log
+
+# 输出文件（图片等）
+output/
+
+# IDE 和编辑器
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# 测试文件
+test_*.py
+verify_*.py
+
+# 临时脚本
+generate_monthly_web_data.py
+send_kr_monthly.py
+
+# 数据文件（本地数据，不包括 docs/data）
+/data/
+
+# Jupyter Notebook
+.ipynb_checkpoints/
+
+# Coverage
+.coverage
+htmlcov/

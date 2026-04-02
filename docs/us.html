@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>美股日报 - 股票监控</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🇺🇸</text></svg>">
+</head>
+<body>
+  <header class="header">
+    <div class="header-content">
+      <a href="index.html" class="logo">
+        <span class="logo-icon">📈</span>
+        <span>股票监控</span>
+      </a>
+      <nav class="nav">
+        <a href="index.html" class="nav-link">首页</a>
+        <a href="kr.html" class="nav-link">🇰🇷 韩股</a>
+        <a href="us.html" class="nav-link active">🇺🇸 美股</a>
+        <a href="hk.html" class="nav-link">🇭🇰 港股</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="main">
+    <a href="index.html" class="back-link">← 返回首页</a>
+    
+    <h1 class="page-title">🇺🇸 美股科技/游戏股票日报</h1>
+    <p class="page-subtitle">
+      最后更新：<span id="update-time">-</span>
+    </p>
+
+    <!-- 休市提醒 -->
+    <div id="holiday-notice"></div>
+
+    <!-- 历史数据选项卡 -->
+    <div id="history-tabs"></div>
+
+    <!-- 日报内容 -->
+    <div class="card fade-in">
+      <div class="card-header">
+        <div class="card-title">
+          <span>📈</span>
+          <span>大盘指数</span>
+        </div>
+      </div>
+      <div id="market-index">
+        <div class="skeleton" style="height: 60px;"></div>
+      </div>
+    </div>
+
+    <div class="card fade-in" style="margin-top: var(--spacing-lg);">
+      <div class="card-header">
+        <div class="card-title">
+          <span>💻</span>
+          <span>科技 & 游戏股票</span>
+        </div>
+      </div>
+      <div id="stock-table">
+        <div class="skeleton" style="height: 300px;"></div>
+      </div>
+    </div>
+
+    <!-- AI 分析 -->
+    <div id="ai-analysis" style="margin-top: var(--spacing-lg);"></div>
+
+    <!-- 月报区块 -->
+    <div class="monthly-section">
+      <div id="monthly-section">
+        <div class="loading">
+          <div class="loading-spinner"></div>
+          <div style="margin-top: var(--spacing-md);">加载月报数据...</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 底部信息 -->
+    <footer class="footer">
+      <div class="footer-update">
+        最后更新：<span id="footer-time">-</span>
+      </div>
+      <div>数据来源：Yahoo Finance | 仅供参考，不构成投资建议</div>
+    </footer>
+  </main>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

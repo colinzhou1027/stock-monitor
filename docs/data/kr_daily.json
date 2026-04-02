@@ -1,0 +1,72 @@
+{
+  "latest": {
+    "date": "2026-04-03",
+    "update_time": "2026-04-03 01:27:03",
+    "stocks": [
+      {
+        "symbol": "462870",
+        "name": "Shift Up",
+        "prev_close": 32250.0,
+        "prev_prev_close": 33900.0,
+        "change_percent": -4.87,
+        "prev_date": "4/02",
+        "prev_prev_date": "4/01"
+      },
+      {
+        "symbol": "259960",
+        "name": "Krafton",
+        "prev_close": 247500.0,
+        "prev_prev_close": 262000.0,
+        "change_percent": -5.53,
+        "prev_date": "4/02",
+        "prev_prev_date": "4/01"
+      },
+      {
+        "symbol": "036570",
+        "name": "NCsoft",
+        "prev_close": 213000.0,
+        "prev_prev_close": 229500.0,
+        "change_percent": -7.19,
+        "prev_date": "4/02",
+        "prev_prev_date": "4/01"
+      },
+      {
+        "symbol": "251270",
+        "name": "Netmarble",
+        "prev_close": 49000.0,
+        "prev_prev_close": 51400.0,
+        "change_percent": -4.67,
+        "prev_date": "4/02",
+        "prev_prev_date": "4/01"
+      },
+      {
+        "symbol": "225570",
+        "name": "Nexon Games",
+        "prev_close": 11440.0,
+        "prev_prev_close": 12020.0,
+        "change_percent": -4.83,
+        "prev_date": "4/02",
+        "prev_prev_date": "4/01"
+      },
+      {
+        "symbol": "263750",
+        "name": "Pearl Abyss",
+        "prev_close": 66200.0,
+        "prev_prev_close": 72000.0,
+        "change_percent": -8.06,
+        "prev_date": "4/02",
+        "prev_prev_date": "4/01"
+      }
+    ],
+    "market_index": {
+      "name": "KOSPI 200",
+      "prev_close": 78190.0,
+      "prev_prev_close": 82170.0,
+      "change_percent": -4.84,
+      "prev_date": "4/02",
+      "prev_prev_date": "4/01"
+    },
+    "ai_analysis": "⚠️ AI 分析服务暂时不可用（5次尝试均未成功），以下为股票变化概况：\n\n请关注相关公司的最新公告和行业新闻以了解具体原因。"
+  },
+  "history": []
+}

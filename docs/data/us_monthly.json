@@ -1,0 +1,76 @@
+{
+  "latest": {
+    "year": 2026,
+    "month": 3,
+    "update_time": "2026-04-03 01:03:53",
+    "avg_change": -8.29,
+    "stock_data": {
+      "AAPL": {
+        "name": "Apple",
+        "change_percent": -6.8,
+        "start_price": 182.5,
+        "end_price": 170.1
+      },
+      "MSFT": {
+        "name": "Microsoft",
+        "change_percent": -5.2,
+        "start_price": 398.0,
+        "end_price": 377.3
+      },
+      "GOOGL": {
+        "name": "Alphabet",
+        "change_percent": -7.5,
+        "start_price": 156.2,
+        "end_price": 144.5
+      },
+      "NVDA": {
+        "name": "NVIDIA",
+        "change_percent": -12.3,
+        "start_price": 875.0,
+        "end_price": 767.4
+      },
+      "META": {
+        "name": "Meta",
+        "change_percent": -8.9,
+        "start_price": 498.5,
+        "end_price": 454.1
+      },
+      "EA": {
+        "name": "Electronic Arts",
+        "change_percent": -4.2,
+        "start_price": 138.6,
+        "end_price": 132.8
+      },
+      "TTWO": {
+        "name": "Take-Two",
+        "change_percent": -5.8,
+        "start_price": 165.3,
+        "end_price": 155.7
+      },
+      "RBLX": {
+        "name": "Roblox",
+        "change_percent": -15.6,
+        "start_price": 42.8,
+        "end_price": 36.1
+      }
+    },
+    "index_data": {
+      "indices": [
+        {
+          "name": "NASDAQ",
+          "change_percent": -8.5,
+          "start_value": 16280,
+          "end_value": 14895
+        },
+        {
+          "name": "S&P 500",
+          "change_percent": -6.2,
+          "start_value": 5120,
+          "end_value": 4803
+        }
+      ]
+    },
+    "ai_analysis": "2026年3月美股科技板块经历显著回调，受美联储鹰派信号及地缘政治紧张局势影响。NVIDIA 跌幅达12.3%，尽管AI芯片需求依然强劲，但估值压力导致获利回吐。Roblox 下跌15.6%，用户增长放缓引发市场担忧。传统游戏公司如EA和Take-Two相对抗跌，受益于稳定的游戏发行周期。建议关注4月初财报及美联储5月利率决议预期。"
+  },
+  "history": []
+}

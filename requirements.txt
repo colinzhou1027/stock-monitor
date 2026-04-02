@@ -1,0 +1,26 @@
+# Stock Monitor - Dependencies
+# Python 3.9+
+
+# Korean stock data fetching (韩国股票数据 - 使用 KRX 数据源)
+pykrx==1.0.45
+
+# US/HK stock data fetching (美股/港股数据)
+# 主要数据源：akshare（东方财富/新浪，国内源更稳定）
+akshare>=1.18.0
+# 备用数据源：yfinance（Yahoo Finance，海外源）
+yfinance>=0.2.36
+
+# HTTP requests
+requests==2.31.0
+
+# Configuration management (配置管理)
+python-dotenv==1.0.1
+
+# Timezone support (时区支持)
+pytz==2024.1
+
+# Data processing
+pandas>=1.5.0
+
+# Chart generation (图表生成)
+matplotlib>=3.7.0

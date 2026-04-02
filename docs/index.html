@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>股票监控 - 每日行情</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📈</text></svg>">
+</head>
+<body>
+  <header class="header">
+    <div class="header-content">
+      <a href="index.html" class="logo">
+        <span class="logo-icon">📈</span>
+        <span>股票监控</span>
+      </a>
+      <nav class="nav">
+        <a href="index.html" class="nav-link active">首页</a>
+        <a href="kr.html" class="nav-link">🇰🇷 韩股</a>
+        <a href="us.html" class="nav-link">🇺🇸 美股</a>
+        <a href="hk.html" class="nav-link">🇭🇰 港股</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="main">
+    <h1 class="page-title">股票行情概览</h1>
+    <p class="page-subtitle">实时追踪韩股、美股、港股游戏及科技股票动态</p>
+
+    <!-- Shift Up 快讯 -->
+    <div id="shiftup-alert" class="alert-section" style="display: none;"></div>
+
+    <!-- 市场日报概览 -->
+    <section class="section">
+      <h2 class="section-title">📊 每日行情</h2>
+      <div id="market-cards" class="market-grid">
+        <!-- 骨架屏占位 -->
+        <div class="card skeleton" style="height: 180px;"></div>
+        <div class="card skeleton" style="height: 180px;"></div>
+        <div class="card skeleton" style="height: 180px;"></div>
+      </div>
+    </section>
+
+    <!-- 月报区域 -->
+    <section class="section">
+      <h2 class="section-title">📈 月度报告</h2>
+      <div id="monthly-cards" class="market-grid">
+        <!-- 骨架屏占位 -->
+        <div class="card skeleton" style="height: 150px;"></div>
+        <div class="card skeleton" style="height: 150px;"></div>
+        <div class="card skeleton" style="height: 150px;"></div>
+      </div>
+    </section>
+
+    <!-- 底部信息 -->
+    <footer class="footer">
+      <div class="footer-update">
+        最后更新：<span id="footer-time">-</span>
+      </div>
+      <div>数据来源：KRX、Yahoo Finance | 仅供参考，不构成投资建议</div>
+    </footer>
+  </main>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
