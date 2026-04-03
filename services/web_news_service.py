@@ -49,10 +49,10 @@ class WebNewsService(LoggerMixin):
     # DuckDuckGo 搜索 URL
     DDG_URL = "https://html.duckduckgo.com/html/"
     
-    # 请求配置
-    REQUEST_TIMEOUT = 20
-    REQUEST_DELAY = 1.5
-    MAX_RETRIES = 2
+    # 请求配置 - 延长超时和间隔，确保获取完整新闻
+    REQUEST_TIMEOUT = 45  # 延长到45秒
+    REQUEST_DELAY = 2.5   # 增加请求间隔，避免被限流
+    MAX_RETRIES = 3       # 增加重试次数
     
     # 用户代理
     USER_AGENTS = [
@@ -176,69 +176,93 @@ class WebNewsService(LoggerMixin):
             self.logger.debug(f"使用缓存: {query}")
             return cached[:max_results]
         
-        try:
-            # 添加新闻关键词
-            search_query = f"{query} 新闻 最新"
-            
-            self.logger.info(f"DuckDuckGo 中文搜索: {query}")
-            
-            response = requests.post(
-                self.DDG_URL,
-                data={"q": search_query, "kl": "cn-zh"},  # 设置中文区域
-                headers=self._get_headers(),
-                timeout=self.REQUEST_TIMEOUT
-            )
-            response.raise_for_status()
-            
-            soup = BeautifulSoup(response.text, 'html.parser')
-            results = []
-            
-            # 解析搜索结果
-            for result in soup.select('.result'):
+        all_results = []
+        
+        # 多次尝试不同的搜索词组合，确保获取更多新闻
+        search_queries = [
+            f"{query} 新闻 最新",
+            f"{query} 最新消息 动态",
+        ]
+        
+        for retry in range(self.MAX_RETRIES):
+            for search_query in search_queries:
+                if len(all_results) >= max_results:
+                    break
+                    
                 try:
-                    # 标题和链接
-                    title_elem = result.select_one('.result__title a')
-                    if not title_elem:
-                        continue
+                    self.logger.info(f"DuckDuckGo 搜索 (尝试 {retry + 1}): {search_query}")
                     
-                    title = title_elem.get_text(strip=True)
-                    url = title_elem.get('href', '')
+                    response = requests.post(
+                        self.DDG_URL,
+                        data={"q": search_query, "kl": "cn-zh"},  # 设置中文区域
+                        headers=self._get_headers(),
+                        timeout=self.REQUEST_TIMEOUT
+                    )
+                    response.raise_for_status()
                     
-                    # 清理 DuckDuckGo 的跳转 URL
-                    if 'uddg=' in url:
-                        import urllib.parse
-                        parsed = urllib.parse.parse_qs(urllib.parse.urlparse(url).query)
-                        if 'uddg' in parsed:
-                            url = parsed['uddg'][0]
+                    soup = BeautifulSoup(response.text, 'html.parser')
                     
-                    # 内容摘要
-                    snippet_elem = result.select_one('.result__snippet')
-                    content = snippet_elem.get_text(strip=True) if snippet_elem else ""
+                    # 解析搜索结果
+                    for result in soup.select('.result'):
+                        try:
+                            # 标题和链接
+                            title_elem = result.select_one('.result__title a')
+                            if not title_elem:
+                                continue
+                            
+                            title = title_elem.get_text(strip=True)
+                            url = title_elem.get('href', '')
+                            
+                            # 清理 DuckDuckGo 的跳转 URL
+                            if 'uddg=' in url:
+                                import urllib.parse
+                                parsed = urllib.parse.parse_qs(urllib.parse.urlparse(url).query)
+                                if 'uddg' in parsed:
+                                    url = parsed['uddg'][0]
+                            
+                            # 内容摘要
+                            snippet_elem = result.select_one('.result__snippet')
+                            content = snippet_elem.get_text(strip=True) if snippet_elem else ""
+                            
+                            # 跳过没有内容的结果
+                            if not content or len(content) < 20:
+                                continue
+                            
+                            # 来源
+                            source = urlparse(url).netloc.replace('www.', '')
+                            
+                            # 检查是否重复（通过 URL 判断）
+                            if any(r.url == url for r in all_results):
+                                continue
+                            
+                            all_results.append(WebNewsItem(
+                                title=title,
+                                content=content,
+                                source=source,
+                                url=url
+                            ))
+                            
+                            if len(all_results) >= max_results * 2:  # 获取更多，以便后续筛选
+                                break
+                                
+                        except Exception as e:
+                            self.logger.debug(f"解析结果失败: {e}")
+                            continue
                     
-                    # 来源
-                    source = urlparse(url).netloc.replace('www.', '')
+                    # 请求间隔
+                    time.sleep(1)
                     
-                    results.append(WebNewsItem(
-                        title=title,
-                        content=content,
-                        source=source,
-                        url=url
-                    ))
-                    
-                    if len(results) >= max_results:
-                        break
-                        
                 except Exception as e:
-                    self.logger.debug(f"解析结果失败: {e}")
+                    self.logger.warning(f"DuckDuckGo 搜索失败 (尝试 {retry + 1}): {e}")
+                    time.sleep(2)  # 失败后等待更长时间
                     continue
             
-            self._set_cache(cache_key, results)
-            self.logger.info(f"DuckDuckGo 获取到 {len(results)} 条结果")
-            return results
-            
-        except Exception as e:
-            self.logger.error(f"DuckDuckGo 搜索失败: {e}")
-            return []
+            if len(all_results) >= max_results:
+                break
+        
+        self._set_cache(cache_key, all_results)
+        self.logger.info(f"DuckDuckGo 总共获取到 {len(all_results)} 条结果")
+        return all_results[:max_results]
     
     # ================================================================
     # 股票新闻搜索（中文）
@@ -318,17 +342,20 @@ class WebNewsService(LoggerMixin):
         
         # 1. 获取市场新闻
         self.logger.info("获取市场整体新闻...")
-        market_news = self.search_market_news(max_results=5)
+        market_news = self.search_market_news(max_results=8)
         
         if market_news:
             lines.append("**📰 今日市场要闻**")
             lines.append("")
-            for news in market_news[:3]:
+            for news in market_news[:4]:  # 显示更多市场新闻
                 # 标题
                 lines.append(f"**{news.title}**")
-                # 详细内容
+                # 详细内容 - 增加字符限制
                 if news.content:
-                    lines.append(f"{news.content}")
+                    content = news.content
+                    if len(content) > 300:
+                        content = content[:300] + "..."
+                    lines.append(f"{content}")
                 lines.append(f"_来源: {news.source}_")
                 lines.append("")
         
@@ -347,7 +374,7 @@ class WebNewsService(LoggerMixin):
         )
         
         has_news = False
-        for stock in sorted_stocks[:8]:
+        for stock in sorted_stocks[:10]:  # 搜索更多公司
             name = stock.get('name', '')
             if not name:
                 continue
@@ -357,18 +384,18 @@ class WebNewsService(LoggerMixin):
             self.logger.info(f"获取 {name} ({cn_name}) 新闻...")
             time.sleep(self.REQUEST_DELAY)
             
-            stock_news = self.search_stock_news(name, max_results=3)
+            stock_news = self.search_stock_news(name, max_results=5)  # 增加搜索数量
             
             # 只显示有新闻的公司，无新闻的跳过
             if stock_news:
                 has_news = True
                 lines.append(f"**{cn_name}**")
-                for news in stock_news[:2]:
+                for news in stock_news[:3]:  # 每个公司显示更多新闻
                     # 显示内容，不仅仅是标题
                     if news.content:
                         content = news.content
-                        if len(content) > 150:
-                            content = content[:150] + "..."
+                        if len(content) > 250:  # 增加字符限制
+                            content = content[:250] + "..."
                         lines.append(f"• {content}")
                     else:
                         # 如果没有内容，显示标题
@@ -405,14 +432,14 @@ class WebNewsService(LoggerMixin):
         lines.append(f"**📰 {year}年{month}月{market_name}板块要闻**")
         lines.append("")
         
-        market_news = self.search_market_news(max_results=8)
+        market_news = self.search_market_news(max_results=12)  # 增加搜索数量
         if market_news:
-            for news in market_news[:4]:
+            for news in market_news[:6]:  # 显示更多新闻
                 lines.append(f"**{news.title}**")
                 if news.content:
                     content = news.content
-                    if len(content) > 200:
-                        content = content[:200] + "..."
+                    if len(content) > 350:  # 增加字符限制
+                        content = content[:350] + "..."
                     lines.append(f"{content}")
                 lines.append(f"_来源: {news.source}_")
                 lines.append("")
@@ -435,24 +462,24 @@ class WebNewsService(LoggerMixin):
         )
         
         has_news = False
-        for symbol, data in sorted_stocks[:10]:
+        for symbol, data in sorted_stocks[:12]:  # 搜索更多公司
             name = data.get('name', symbol)
             cn_name = self._get_cn_name(name)
             
             self.logger.info(f"获取 {name} ({cn_name}) 月度新闻...")
             time.sleep(self.REQUEST_DELAY)
             
-            stock_news = self.search_stock_news(name, max_results=3)
+            stock_news = self.search_stock_news(name, max_results=5)  # 增加搜索数量
             
             # 只显示有新闻的公司，无新闻的跳过
             if stock_news:
                 has_news = True
                 lines.append(f"**{cn_name}**")
-                for news in stock_news[:2]:
+                for news in stock_news[:3]:  # 每个公司显示更多新闻
                     if news.content:
                         content = news.content
-                        if len(content) > 150:
-                            content = content[:150] + "..."
+                        if len(content) > 250:  # 增加字符限制
+                            content = content[:250] + "..."
                         lines.append(f"• {content}")
                     else:
                         lines.append(f"• {news.title}")
