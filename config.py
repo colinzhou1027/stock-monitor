@@ -25,11 +25,6 @@ class Config:
     # 企业微信配置
     wecom_webhook_urls: List[str]
     
-    # AI 配置（使用通义千问）
-    ai_api_key: str
-    ai_model: str
-    ai_provider: str  # "qwen"
-    
     # 监控配置
     change_threshold: float
     
@@ -57,22 +52,10 @@ def load_config() -> Config:
         print(f"✅ 加载主 webhook: ...{key_suffix}")
     
     print(f"📊 总共加载了 {len(webhook_urls)} 个 webhook")
-    
-    # AI 配置：使用通义千问
-    ai_api_key = os.getenv("QWEN_API_KEY", "")
-    ai_model = os.getenv("QWEN_MODEL", "qwen-max")
-    ai_provider = "qwen"
-    
-    if ai_api_key:
-        print(f"🤖 使用通义千问 {ai_model}")
-    else:
-        print("⚠️ 未配置 QWEN_API_KEY")
+    print(f"📝 使用基于模板的摘要服务（无需AI API）")
     
     return Config(
         wecom_webhook_urls=webhook_urls,
-        ai_api_key=ai_api_key,
-        ai_model=ai_model,
-        ai_provider=ai_provider,
         change_threshold=float(os.getenv("CHANGE_THRESHOLD", "10.0")),
         schedule_time=os.getenv("SCHEDULE_TIME", "10:00"),
         timezone=os.getenv("TIMEZONE", "Asia/Shanghai"),

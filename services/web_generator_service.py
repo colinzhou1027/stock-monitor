@@ -176,7 +176,8 @@ class WebGeneratorService(LoggerMixin):
         avg_change: float,
         index_data: Optional[Dict] = None,
         ai_analysis: Optional[str] = None,
-        ai_news_summary: Optional[str] = None
+        ai_news_summary: Optional[str] = None,
+        chart_data: Optional[bytes] = None
     ) -> bool:
         """
         生成月报 JSON 数据
@@ -190,6 +191,7 @@ class WebGeneratorService(LoggerMixin):
             index_data: 大盘指数数据
             ai_analysis: AI 月度分析
             ai_news_summary: AI 新闻汇总
+            chart_data: 月度图表图片数据 (bytes)
             
         Returns:
             是否成功
@@ -197,23 +199,61 @@ class WebGeneratorService(LoggerMixin):
         now = datetime.now()
         update_time = now.strftime("%Y-%m-%d %H:%M:%S")
         
+        # 保存图表图片
+        chart_url = None
+        if chart_data:
+            chart_filename = f"{market}_{year}_{month:02d}_chart.png"
+            chart_path = self.data_dir / chart_filename
+            try:
+                with open(chart_path, 'wb') as f:
+                    f.write(chart_data)
+                chart_url = f"data/{chart_filename}"
+                self.logger.info(f"保存月报图表成功: {chart_filename}")
+            except Exception as e:
+                self.logger.error(f"保存月报图表失败: {e}")
+        
+        # 清理 stock_data 中不可序列化的字段（如 DataFrame）
+        clean_stock_data = {}
+        for symbol, data in stock_data.items():
+            clean_data = {
+                "name": data.get("name", symbol),
+                "change_percent": round(data.get("change_percent", 0), 2),
+            }
+            # 可选字段
+            if "start_price" in data:
+                clean_data["start_price"] = float(data["start_price"])
+            if "end_price" in data:
+                clean_data["end_price"] = float(data["end_price"])
+            clean_stock_data[symbol] = clean_data
+        
+        # 清理 index_data 中不可序列化的字段
+        clean_index_data = None
+        if index_data:
+            clean_index_data = {
+                "name": index_data.get("name", ""),
+                "change_percent": round(index_data.get("change_percent", 0), 2),
+            }
+        
         # 构建月报数据
         monthly_data = {
             "year": year,
             "month": month,
             "update_time": update_time,
             "avg_change": round(avg_change, 2),
-            "stock_data": stock_data,
+            "stock_data": clean_stock_data,
         }
         
-        if index_data:
-            monthly_data["index_data"] = index_data
+        if clean_index_data:
+            monthly_data["index_data"] = clean_index_data
         
         if ai_analysis:
             monthly_data["ai_analysis"] = ai_analysis
         
         if ai_news_summary:
             monthly_data["ai_news_summary"] = ai_news_summary
+        
+        if chart_url:
+            monthly_data["chart_url"] = chart_url
         
         # 加载现有数据
         filename = f"{market}_monthly.json"

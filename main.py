@@ -24,7 +24,7 @@ from config import (
 )
 from models.stock import StockInfo
 from services.stock_service import StockService
-from services.ai_service import AIService
+from services.summary_service import SummaryService
 from services.notify_service import NotifyService
 from services.monthly_chart_service import MonthlyChartService
 from services.web_generator_service import WebGeneratorService
@@ -38,7 +38,7 @@ logger = get_logger(__name__)
 def generate_and_send_monthly_report(
     market: str,
     config: Config,
-    ai_service: AIService,
+    summary_service: SummaryService,
     notify_service: NotifyService,
     monthly_chart_service: MonthlyChartService,
     stock_type: str = 'game',
@@ -50,11 +50,11 @@ def generate_and_send_monthly_report(
     Args:
         market: 市场类型 (kr/us/hk)
         config: 配置对象
-        ai_service: AI 服务实例
+        summary_service: 摘要服务实例
         notify_service: 通知服务实例
         monthly_chart_service: 月报图表服务实例
         stock_type: 股票类型 ('tech'/'game')
-        reuse_data: 复用的数据（避免重复生成 AI 分析）
+        reuse_data: 复用的数据（避免重复生成分析）
         
     Returns:
         (是否成功发送, 生成的数据字典) - 数据字典包含 chart_year, chart_month, chart_data, stock_data, avg_change, index_data, ai_analysis, ai_news_summary
@@ -104,45 +104,36 @@ def generate_and_send_monthly_report(
     
     logger.info(f"生成 {chart_year}年{chart_month}月 月度趋势图，平均涨跌幅: {avg_change:+.2f}%")
     
-    # 生成 AI 分析（如果配置了 API Key）
+    # 生成月度摘要分析（使用基于模板的摘要服务）
     ai_news_summary = None
     ai_analysis = None
     
-    if config.ai_api_key:
-        # 生成新闻汇总（带安全检查）
-        logger.info(f"生成 {market_name}{type_name}月度新闻汇总...")
-        try:
-            ai_news_summary = ai_service.analyze_monthly_news_summary(
-                year=chart_year,
-                month=chart_month,
-                stock_data=stock_data,
-                market=market
-            )
-            # 安全检查：如果返回的是错误信息，设为 None
-            if ai_news_summary and ai_news_summary.startswith("⚠️"):
-                logger.warning(f"新闻汇总生成失败: {ai_news_summary[:80]}")
-                ai_news_summary = None
-        except Exception as e:
-            logger.error(f"新闻汇总生成异常: {e}")
-            ai_news_summary = None
-        
-        # 生成月度分析（带安全检查）
-        logger.info(f"生成 {market_name}{type_name}月度分析...")
-        try:
-            ai_analysis = ai_service.analyze_monthly_report(
-                year=chart_year,
-                month=chart_month,
-                stock_data=stock_data,
-                index_data=index_data,
-                stock_type=stock_type
-            )
-            # 安全检查：如果返回的是错误信息，设为 None
-            if ai_analysis and ai_analysis.startswith("⚠️"):
-                logger.warning(f"月度分析生成失败: {ai_analysis[:80]}")
-                ai_analysis = None
-        except Exception as e:
-            logger.error(f"月度分析生成异常: {e}")
-            ai_analysis = None
+    # 生成新闻汇总
+    logger.info(f"生成 {market_name}{type_name}月度新闻汇总...")
+    try:
+        ai_news_summary = summary_service.analyze_monthly_news_summary(
+            year=chart_year,
+            month=chart_month,
+            stock_data=stock_data,
+            market=market
+        )
+    except Exception as e:
+        logger.error(f"新闻汇总生成异常: {e}")
+        ai_news_summary = None
+    
+    # 生成月度分析
+    logger.info(f"生成 {market_name}{type_name}月度分析...")
+    try:
+        ai_analysis = summary_service.analyze_monthly_report(
+            year=chart_year,
+            month=chart_month,
+            stock_data=stock_data,
+            index_data=index_data,
+            stock_type=stock_type
+        )
+    except Exception as e:
+        logger.error(f"月度分析生成异常: {e}")
+        ai_analysis = None
     
     # 发送月报
     success = notify_service.send_monthly_report(
@@ -232,12 +223,7 @@ def run_kr_check(config: Config) -> None:
     logger.info("=" * 50)
     
     stock_service = StockService(market=MARKET_KR, timezone=config.timezone)
-    ai_service = AIService(
-        market=MARKET_KR,
-        api_key=config.ai_api_key,
-        model=config.ai_model,
-        provider=config.ai_provider
-    )
+    summary_service = SummaryService(market=MARKET_KR)
     notify_service = NotifyService(market=MARKET_KR, webhook_urls=config.wecom_webhook_urls)
     monthly_chart_service = MonthlyChartService()
     web_generator = WebGeneratorService()
@@ -274,7 +260,7 @@ def run_kr_check(config: Config) -> None:
         monthly_sent, monthly_data = generate_and_send_monthly_report(
             market=MARKET_KR,
             config=config,
-            ai_service=ai_service,
+            summary_service=summary_service,
             notify_service=notify_service,
             monthly_chart_service=monthly_chart_service,
             stock_type='game'
@@ -290,28 +276,29 @@ def run_kr_check(config: Config) -> None:
                 avg_change=monthly_data['avg_change'],
                 index_data=monthly_data['index_data'],
                 ai_analysis=monthly_data['ai_analysis'],
-                ai_news_summary=monthly_data['ai_news_summary']
+                ai_news_summary=monthly_data['ai_news_summary'],
+                chart_data=monthly_data.get('chart_data')
             )
         
         if monthly_sent:
             import time
             time.sleep(2)
         
-        # 生成日报 AI 分析
-        logger.info(f"获取到 {len(all_changes)} 只股票数据，开始 AI 分析")
+        # 生成日报摘要分析
+        logger.info(f"获取到 {len(all_changes)} 只股票数据，开始生成摘要分析")
         
         prev_trading_date = all_changes[0].prev_date if all_changes else None
         if prev_trading_date:
             logger.info(f"上一交易日: {prev_trading_date.strftime('%Y-%m-%d')}")
         
-        analysis = ai_service.analyze_stock_changes(
+        analysis = summary_service.analyze_stock_changes(
             changes=all_changes,
             prev_trading_date=prev_trading_date
         )
         
         if not analysis or not analysis.strip():
-            logger.warning("AI 分析返回空结果，使用备用提示")
-            analysis = "⚠️ AI 分析暂时不可用，请关注相关公司的最新公告和行业新闻。"
+            logger.warning("摘要分析返回空结果，使用备用提示")
+            analysis = "⚠️ 摘要分析暂时不可用，请关注相关公司的最新公告和行业新闻。"
         
         # === 生成网页数据 ===
         logger.info("生成韩股日报网页数据...")
@@ -364,12 +351,7 @@ def run_us_hk_check(config: Config, market: str) -> None:
     logger.info("=" * 50)
     
     stock_service = StockService(market=market, timezone=config.timezone)
-    ai_service = AIService(
-        market=market,
-        api_key=config.ai_api_key,
-        model=config.ai_model,
-        provider=config.ai_provider
-    )
+    summary_service = SummaryService(market=market)
     notify_service = NotifyService(market=market, webhook_urls=config.wecom_webhook_urls)
     monthly_chart_service = MonthlyChartService()
     web_generator = WebGeneratorService()
@@ -422,37 +404,32 @@ def run_us_hk_check(config: Config, market: str) -> None:
             )
             
             if chart_data:
-                # 生成 AI 分析
+                # 生成摘要分析
                 ai_news_summary = None
                 ai_analysis = None
                 
-                if config.ai_api_key:
-                    logger.info(f"生成 {market_name}月度新闻汇总...")
-                    try:
-                        ai_news_summary = ai_service.analyze_monthly_news_summary(
-                            year=chart_year,
-                            month=chart_month,
-                            stock_data=stock_data,
-                            market=market
-                        )
-                        if ai_news_summary and ai_news_summary.startswith("⚠️"):
-                            ai_news_summary = None
-                    except Exception as e:
-                        logger.error(f"新闻汇总生成异常: {e}")
-                    
-                    logger.info(f"生成 {market_name}月度分析...")
-                    try:
-                        ai_analysis = ai_service.analyze_monthly_report(
-                            year=chart_year,
-                            month=chart_month,
-                            stock_data=stock_data,
-                            index_data=index_data,
-                            stock_type='tech'
-                        )
-                        if ai_analysis and ai_analysis.startswith("⚠️"):
-                            ai_analysis = None
-                    except Exception as e:
-                        logger.error(f"月度分析生成异常: {e}")
+                logger.info(f"生成 {market_name}月度新闻汇总...")
+                try:
+                    ai_news_summary = summary_service.analyze_monthly_news_summary(
+                        year=chart_year,
+                        month=chart_month,
+                        stock_data=stock_data,
+                        market=market
+                    )
+                except Exception as e:
+                    logger.error(f"新闻汇总生成异常: {e}")
+                
+                logger.info(f"生成 {market_name}月度分析...")
+                try:
+                    ai_analysis = summary_service.analyze_monthly_report(
+                        year=chart_year,
+                        month=chart_month,
+                        stock_data=stock_data,
+                        index_data=index_data,
+                        stock_type='tech'
+                    )
+                except Exception as e:
+                    logger.error(f"月度分析生成异常: {e}")
                 
                 # 生成月报网页数据（不发送群消息）
                 web_generator.generate_monthly_data(
@@ -463,15 +440,16 @@ def run_us_hk_check(config: Config, market: str) -> None:
                     avg_change=avg_change,
                     index_data=index_data,
                     ai_analysis=ai_analysis,
-                    ai_news_summary=ai_news_summary
+                    ai_news_summary=ai_news_summary,
+                    chart_data=chart_data
                 )
                 
                 # 记录发送状态（避免重复生成）
                 monthly_chart_service._save_sent_month(chart_year, chart_month, market)
                 logger.info(f"{market_name}月报网页数据生成成功")
         
-        # 生成日报 AI 分析
-        logger.info("开始 AI 分析...")
+        # 生成日报摘要分析
+        logger.info("开始生成摘要分析...")
         
         prev_trading_date = None
         if tech_changes:
@@ -482,7 +460,7 @@ def run_us_hk_check(config: Config, market: str) -> None:
         if prev_trading_date:
             logger.info(f"上一交易日: {prev_trading_date.strftime('%Y-%m-%d')}")
         
-        analysis = ai_service.analyze_stock_changes(
+        analysis = summary_service.analyze_stock_changes(
             tech_changes=tech_changes,
             game_changes=game_changes,
             indices=indices,
@@ -490,8 +468,8 @@ def run_us_hk_check(config: Config, market: str) -> None:
         )
         
         if not analysis or not analysis.strip():
-            logger.warning("AI 分析返回空结果，使用备用提示")
-            analysis = "⚠️ AI 分析暂时不可用，请关注相关公司的最新公告和行业新闻。"
+            logger.warning("摘要分析返回空结果，使用备用提示")
+            analysis = "⚠️ 摘要分析暂时不可用，请关注相关公司的最新公告和行业新闻。"
         
         # === 生成网页数据（不发送群消息）===
         logger.info(f"生成{market_name}日报网页数据...")
@@ -596,11 +574,7 @@ def main():
     
     logger.info("配置验证通过")
     logger.info(f"监控阈值: {config.change_threshold}%")
-    logger.info(f"AI 提供商: {config.ai_provider}")
-    logger.info(f"AI 模型: {config.ai_model}")
-    
-    if not config.ai_api_key:
-        logger.warning("⚠️  未配置 AI API Key，将不会进行 AI 分析")
+    logger.info(f"摘要服务: 基于模板（无需API配置）")
     
     # 执行股票检查
     if market == 'all':
