@@ -355,6 +355,172 @@ function renderMarketIndex(index, containerId) {
   `;
 }
 
+// 简单的 Markdown 表格解析器
+function parseMarkdownTable(text) {
+  const lines = text.trim().split('\n');
+  let html = '';
+  let tableLines = [];
+  let nonTableLines = [];
+  
+  // 收集连续的表格行
+  for (let i = 0; i < lines.length; i++) {
+    const line = lines[i].trim();
+    
+    // 检测表格行（以 | 开头和结尾）
+    if (line.startsWith('|') && line.endsWith('|')) {
+      // 如果之前有非表格内容，先输出
+      if (nonTableLines.length > 0) {
+        nonTableLines.forEach(l => {
+          if (l) html += `<p>${l}</p>`;
+        });
+        nonTableLines = [];
+      }
+      tableLines.push(line);
+    } else {
+      // 非表格内容
+      if (tableLines.length > 0) {
+        // 渲染之前的表格
+        html += renderTable(tableLines);
+        tableLines = [];
+      }
+      nonTableLines.push(line);
+    }
+  }
+  
+  // 处理剩余内容
+  if (tableLines.length > 0) {
+    html += renderTable(tableLines);
+  }
+  if (nonTableLines.length > 0) {
+    nonTableLines.forEach(l => {
+      if (l) html += `<p>${l}</p>`;
+    });
+  }
+  
+  // 添加免责声明
+  html += `<p class="ai-disclaimer">⚠️ 由于AI联网搜索覆盖范围有限、API调用不稳定、响应时间限制等原因，新闻汇总可能有信息遗漏，如有需要请人工验证。</p>`;
+  
+  return html || text;
+}
+
+// 解析月报内容（新闻汇总和月度分析）
+// 支持格式：
+// - 📰 行业大事 / 🏢 公司动态 / 🔥 市场热点
+// - 📌 月度总结 / 📌 要点回顾 / 📌 后市展望
+function parseMonthlyContent(text) {
+  if (!text) return '';
+  
+  // 按分隔符 --- 分割内容
+  const sections = text.split(/\n---\n|\n-{3,}\n/);
+  let html = '';
+  
+  for (const section of sections) {
+    const trimmed = section.trim();
+    if (!trimmed) continue;
+    
+    // 检查是否有标题行（**📰 xxx** 或 **📌 xxx** 格式）
+    const titleMatch = trimmed.match(/^\*\*([📰🏢🔥📌][^\*]+)\*\*/);
+    
+    if (titleMatch) {
+      const title = titleMatch[1].trim();
+      const content = trimmed.slice(titleMatch[0].length).trim();
+      
+      html += `<div class="monthly-section">`;
+      html += `<div class="monthly-section-title">${title}</div>`;
+      html += `<div class="monthly-section-body">${parseMonthlyBody(content)}</div>`;
+      html += `</div>`;
+    } else {
+      // 无标题的段落
+      html += `<div class="monthly-section">`;
+      html += `<div class="monthly-section-body">${parseMonthlyBody(trimmed)}</div>`;
+      html += `</div>`;
+    }
+  }
+  
+  return html;
+}
+
+// 解析月报正文内容
+function parseMonthlyBody(text) {
+  if (!text) return '';
+  
+  const lines = text.split('\n');
+  let html = '';
+  
+  for (const line of lines) {
+    const trimmed = line.trim();
+    if (!trimmed) continue;
+    
+    // 处理列表项（• 开头）
+    if (trimmed.startsWith('•')) {
+      const content = trimmed.slice(1).trim();
+      // 处理粗体 **xxx**
+      const formatted = content.replace(/\*\*([^\*]+)\*\*/g, '<strong>$1</strong>');
+      html += `<div class="monthly-item">• ${formatted}</div>`;
+    }
+    // 处理粗体公司名称行（**公司名**: 内容）
+    else if (trimmed.match(/^\*\*[^:]+\*\*:/)) {
+      const formatted = trimmed
+        .replace(/\*\*([^\*]+)\*\*/g, '<strong>$1</strong>')
+        .replace(/^(<strong>[^<]+<\/strong>:)/, '$1 ');
+      html += `<div class="monthly-company-item">${formatted}</div>`;
+    }
+    // 普通段落
+    else {
+      const formatted = trimmed.replace(/\*\*([^\*]+)\*\*/g, '<strong>$1</strong>');
+      html += `<p>${formatted}</p>`;
+    }
+  }
+  
+  return html;
+}
+
+// 渲染单个表格
+function renderTable(lines) {
+  if (lines.length === 0) return '';
+  
+  let html = '<table class="ai-table"><thead>';
+  let headerDone = false;
+  
+  for (let i = 0; i < lines.length; i++) {
+    const line = lines[i];
+    
+    // 跳过分隔行（如 |:----:|:-----|）
+    if (line.match(/^\|[\s:\-|]+\|$/)) {
+      if (!headerDone) {
+        html += '</thead><tbody>';
+        headerDone = true;
+      }
+      continue;
+    }
+    
+    // 解析单元格
+    const cells = line.slice(1, -1).split('|').map(cell => cell.trim());
+    
+    // 第一行是表头
+    if (i === 0) {
+      html += '<tr>';
+      cells.forEach(cell => {
+        html += `<th>${cell}</th>`;
+      });
+      html += '</tr>';
+    } else {
+      html += '<tr>';
+      cells.forEach(cell => {
+        html += `<td>${cell}</td>`;
+      });
+      html += '</tr>';
+    }
+  }
+  
+  if (!headerDone) {
+    html += '</thead><tbody>';
+  }
+  html += '</tbody></table>';
+  
+  return html;
+}
+
 // 渲染 AI 分析面板
 function renderAIPanel(analysis, containerId) {
   const container = document.getElementById(containerId);
@@ -380,13 +546,11 @@ function renderAIPanel(analysis, containerId) {
     return;
   }
   
-  // 处理分析内容，转换换行符
-  const formattedAnalysis = analysis
-    .replace(/\n\n/g, '</p><p>')
-    .replace(/\n/g, '<br>');
+  // 处理分析内容，解析 Markdown 表格
+  const formattedAnalysis = parseMarkdownTable(analysis);
   
   container.innerHTML = `
-    <div class="ai-panel">
+    <div class="ai-panel open">
       <div class="ai-panel-header" onclick="toggleAIPanel(this)">
         <div class="ai-panel-title">
           <span>🤖</span>
@@ -396,7 +560,7 @@ function renderAIPanel(analysis, containerId) {
       </div>
       <div class="ai-panel-content">
         <div class="ai-panel-body">
-          <p>${formattedAnalysis}</p>
+          ${formattedAnalysis}
         </div>
       </div>
     </div>
@@ -435,6 +599,15 @@ async function renderMonthlySection(market, containerId) {
       <span>${data.year}年${data.month}月 月报</span>
     </div>
   `;
+  
+  // 月度图表
+  if (data.chart_url) {
+    html += `
+      <div class="monthly-chart">
+        <img src="${data.chart_url}" alt="${data.year}年${data.month}月 股票走势图" loading="lazy">
+      </div>
+    `;
+  }
   
   // 月度统计
   html += `
@@ -504,8 +677,8 @@ async function renderMonthlySection(market, containerId) {
     html += `
       <div style="margin-top: var(--spacing-lg);">
         <h4 style="margin-bottom: var(--spacing-md); color: var(--text-secondary);">📝 月度分析</h4>
-        <div style="background: var(--bg-tertiary); padding: var(--spacing-md); border-radius: 8px; color: var(--text-secondary); line-height: 1.8;">
-          ${data.ai_analysis.replace(/\n/g, '<br>')}
+        <div class="monthly-analysis-content">
+          ${parseMonthlyContent(data.ai_analysis)}
         </div>
       </div>
     `;
@@ -516,8 +689,8 @@ async function renderMonthlySection(market, containerId) {
     html += `
       <div style="margin-top: var(--spacing-lg);">
         <h4 style="margin-bottom: var(--spacing-md); color: var(--text-secondary);">📰 新闻汇总</h4>
-        <div style="background: var(--bg-tertiary); padding: var(--spacing-md); border-radius: 8px; color: var(--text-secondary); line-height: 1.8;">
-          ${data.ai_news_summary.replace(/\n/g, '<br>')}
+        <div class="monthly-news-content">
+          ${parseMonthlyContent(data.ai_news_summary)}
         </div>
       </div>
     `;

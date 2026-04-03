@@ -446,6 +446,105 @@ a:hover {
   margin-bottom: var(--spacing-md);
 }
 
+/* AI 分析表格样式 */
+.ai-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: var(--spacing-md) 0;
+  font-size: 0.875rem;
+}
+
+.ai-table th,
+.ai-table td {
+  padding: var(--spacing-sm) var(--spacing-md);
+  text-align: left;
+  border: 1px solid var(--border-color);
+  vertical-align: top;
+}
+
+.ai-table th {
+  background: var(--bg-tertiary);
+  font-weight: 600;
+  color: var(--text-primary);
+  white-space: nowrap;
+}
+
+.ai-table td {
+  background: var(--bg-secondary);
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+.ai-table tr:hover td {
+  background: var(--bg-tertiary);
+}
+
+/* AI 免责声明 */
+.ai-disclaimer {
+  margin-top: var(--spacing-lg);
+  padding: var(--spacing-md);
+  background: rgba(255, 193, 7, 0.1);
+  border-left: 3px solid #ffc107;
+  color: #ffc107;
+  font-size: 0.8rem;
+  line-height: 1.6;
+}
+
+/* 月报内容样式 */
+.monthly-analysis-content,
+.monthly-news-content {
+  background: var(--bg-tertiary);
+  padding: var(--spacing-md);
+  border-radius: 8px;
+  color: var(--text-secondary);
+  line-height: 1.8;
+}
+
+.monthly-section {
+  margin-bottom: var(--spacing-lg);
+  padding-bottom: var(--spacing-md);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.monthly-section:last-child {
+  margin-bottom: 0;
+  padding-bottom: 0;
+  border-bottom: none;
+}
+
+.monthly-section-title {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: var(--spacing-sm);
+  padding-bottom: var(--spacing-xs);
+}
+
+.monthly-section-body {
+  color: var(--text-secondary);
+}
+
+.monthly-section-body p {
+  margin-bottom: var(--spacing-sm);
+}
+
+.monthly-item {
+  margin-bottom: var(--spacing-xs);
+  padding-left: var(--spacing-sm);
+}
+
+.monthly-company-item {
+  margin-bottom: var(--spacing-md);
+  padding: var(--spacing-sm);
+  background: var(--bg-secondary);
+  border-radius: 4px;
+  border-left: 3px solid var(--primary-color);
+}
+
+.monthly-company-item strong {
+  color: var(--text-primary);
+}
+
 /* 月报区块 */
 .monthly-section {
   margin-top: var(--spacing-xl);

@@ -4,6 +4,7 @@
     "month": 3,
     "update_time": "2026-04-03 01:03:53",
     "avg_change": -8.29,
+    "chart_url": "data/us_2026_03_chart.png",
     "stock_data": {
       "AAPL": {
         "name": "Apple",
