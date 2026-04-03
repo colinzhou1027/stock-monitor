@@ -1,7 +1,7 @@
 {
   "latest": {
     "date": "2026-04-03",
-    "update_time": "2026-04-03 11:22:25",
+    "update_time": "2026-04-03 11:25:57",
     "stocks": [
       {
         "symbol": "462870",
@@ -66,7 +66,7 @@
       "prev_date": "4/02",
       "prev_prev_date": "4/01"
     },
-    "ai_analysis": "⚠️ AI 分析服务暂时不可用（5次尝试均未成功），以下为股票变化概况：\n\n请关注相关公司的最新公告和行业新闻以了解具体原因。"
+    "ai_analysis": "| 公司 | 新闻内容 |\n|:----:|:-----|\n| 🌐 大盘 | • DoubleU Games Stock: A Deep Dive into the Korean Social Casi... |\n| 🎮 Shift Up | 2026年04月02日小幅下跌4.87% |\n| 🎮 Krafton | 2026年04月02日明显下跌5.53% |\n| 🎮 NCsoft | 2026年04月02日明显下跌7.19% |\n| 🎮 Netmarble | 2026年04月02日小幅下跌4.67% |\n| 🎮 Nexon Games | • Nexon Co Ltd Stock: A Key Player in Global Gaming with Bitco... |\n| 🎮 Pearl Abyss | 2026年04月02日明显下跌8.06% |"
   },
   "history": []
 }
