@@ -2,7 +2,7 @@
   "latest": {
     "year": 2026,
     "month": 3,
-    "update_time": "2026-04-03 17:17:32",
+    "update_time": "2026-04-03 17:18:58",
     "avg_change": -6.01,
     "stock_data": {
       "AAPL": {
@@ -52,8 +52,8 @@
       "name": "标普500",
       "change_percent": -5.13
     },
-    "ai_analysis": "**📰 2026年3月美国科技板块要闻**\n\n2026年3月美国科技板块整体运行平稳\n\n---\n\n**🏢 公司重要动态**\n\n3月暂无公司重要新闻披露\n",
-    "ai_news_summary": "**📰 2026年3月美国科技板块要闻**\n\n2026年3月美国科技板块整体运行平稳\n\n---\n\n**🏢 公司重要动态**\n\n3月暂无公司重要新闻披露\n",
+    "ai_analysis": "**📰 2026年3月美国科技板块要闻**\n\n2026年3月美国科技板块整体运行平稳\n\n---\n\n**🏢 公司重要动态**\n\n**Meta（脸书）**\n• 本报告旨在全面分析Meta最新的发展动态，包括公司发展历程及更名原因、商业模式与收入结构、核心产品现状、全球各主要市场的表现、最新财务数据，以及公司在人工智能领域的战略布局，并将Meta的AI战略与Google、OpenAI等同行进行对比。\n• View the latest news, announcements and media resources fromMeta.\n",
+    "ai_news_summary": "**📰 2026年3月美国科技板块要闻**\n\n2026年3月美国科技板块整体运行平稳\n\n---\n\n**🏢 公司重要动态**\n\n**Meta（脸书）**\n• 本报告旨在全面分析Meta最新的发展动态，包括公司发展历程及更名原因、商业模式与收入结构、核心产品现状、全球各主要市场的表现、最新财务数据，以及公司在人工智能领域的战略布局，并将Meta的AI战略与Google、OpenAI等同行进行对比。\n• View the latest news, announcements and media resources fromMeta.\n",
     "chart_url": "data/us_2026_03_chart.png"
   },
   "history": []
