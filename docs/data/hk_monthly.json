@@ -2,64 +2,59 @@
   "latest": {
     "year": 2026,
     "month": 3,
-    "update_time": "2026-04-03 01:03:53",
-    "avg_change": -9.97,
-    "chart_url": "data/hk_2026_03_chart.png",
+    "update_time": "2026-04-03 17:18:00",
+    "avg_change": 1.76,
     "stock_data": {
-      "0700": {
+      "0700.HK": {
         "name": "腾讯控股",
-        "change_percent": -9.5,
-        "start_price": 385.2,
-        "end_price": 348.6
+        "change_percent": -5.84,
+        "start_price": 514.0,
+        "end_price": 484.0
       },
-      "9988": {
+      "9988.HK": {
         "name": "阿里巴巴",
-        "change_percent": -11.2,
-        "start_price": 88.5,
-        "end_price": 78.6
+        "change_percent": -12.76,
+        "start_price": 136.39999389648438,
+        "end_price": 119.0
       },
-      "3690": {
-        "name": "美团",
-        "change_percent": -13.8,
-        "start_price": 128.0,
-        "end_price": 110.3
-      },
-      "9618": {
-        "name": "京东集团",
-        "change_percent": -8.6,
-        "start_price": 135.5,
-        "end_price": 123.8
-      },
-      "9999": {
+      "9999.HK": {
         "name": "网易",
-        "change_percent": -6.2,
-        "start_price": 168.3,
-        "end_price": 157.9
+        "change_percent": -3.71,
+        "start_price": 177.07559204101562,
+        "end_price": 170.5
       },
-      "2018": {
-        "name": "瑞声科技",
-        "change_percent": -10.5,
-        "start_price": 32.8,
-        "end_price": 29.35
+      "1810.HK": {
+        "name": "小米集团",
+        "change_percent": -4.16,
+        "start_price": 33.13999938964844,
+        "end_price": 31.760000228881836
+      },
+      "9888.HK": {
+        "name": "百度集团",
+        "change_percent": -10.8,
+        "start_price": 118.5,
+        "end_price": 105.69999694824219
+      },
+      "0100.HK": {
+        "name": "MiniMax",
+        "change_percent": 23.52,
+        "start_price": 752.5,
+        "end_price": 929.5
+      },
+      "2513.HK": {
+        "name": "智谱AI",
+        "change_percent": 26.09,
+        "start_price": 550.0,
+        "end_price": 693.5
       }
     },
     "index_data": {
-      "indices": [
-        {
-          "name": "恒生指数",
-          "change_percent": -7.8,
-          "start_value": 17850,
-          "end_value": 16458
-        },
-        {
-          "name": "恒生科技指数",
-          "change_percent": -10.2,
-          "start_value": 4120,
-          "end_value": 3700
-        }
-      ]
+      "name": "恒生指数",
+      "change_percent": -4.88
     },
-    "ai_analysis": "2026年3月港股科技板块承压明显，恒生科技指数下跌10.2%。美团跌幅最大（-13.8%），外卖业务竞争加剧及本地生活服务增速放缓影响市场信心。阿里巴巴下跌11.2%，电商业务面临拼多多等竞争压力。腾讯相对稳健（-9.5%），游戏业务版号恢复及视频号商业化进展提供支撑。网易表现最佳（-6.2%），《蛋仔派对》等游戏持续贡献稳定收入。建议关注Q1财报及宏观政策动向。"
+    "ai_analysis": "**📰 2026年3月港股科技板块要闻**\n\n2026年3月港股科技板块整体运行平稳\n\n---\n\n**🏢 公司重要动态**\n\n3月暂无公司重要新闻披露\n",
+    "ai_news_summary": "**📰 2026年3月港股科技板块要闻**\n\n2026年3月港股科技板块整体运行平稳\n\n---\n\n**🏢 公司重要动态**\n\n3月暂无公司重要新闻披露\n",
+    "chart_url": "data/hk_2026_03_chart.png"
   },
   "history": []
 }
