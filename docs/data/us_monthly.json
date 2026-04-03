@@ -2,76 +2,59 @@
   "latest": {
     "year": 2026,
     "month": 3,
-    "update_time": "2026-04-03 01:03:53",
-    "avg_change": -8.29,
-    "chart_url": "data/us_2026_03_chart.png",
+    "update_time": "2026-04-03 17:17:32",
+    "avg_change": -6.01,
     "stock_data": {
       "AAPL": {
-        "name": "Apple",
-        "change_percent": -6.8,
-        "start_price": 182.5,
-        "end_price": 170.1
-      },
-      "MSFT": {
-        "name": "Microsoft",
-        "change_percent": -5.2,
-        "start_price": 398.0,
-        "end_price": 377.3
+        "name": "苹果",
+        "change_percent": -4.13,
+        "start_price": 264.7200012207031,
+        "end_price": 253.7899932861328
       },
       "GOOGL": {
-        "name": "Alphabet",
-        "change_percent": -7.5,
-        "start_price": 156.2,
-        "end_price": 144.5
+        "name": "谷歌",
+        "change_percent": -6.12,
+        "start_price": 306.3043518066406,
+        "end_price": 287.55999755859375
+      },
+      "AMZN": {
+        "name": "亚马逊",
+        "change_percent": -0.06,
+        "start_price": 208.38999938964844,
+        "end_price": 208.27000427246094
       },
       "NVDA": {
-        "name": "NVIDIA",
-        "change_percent": -12.3,
-        "start_price": 875.0,
-        "end_price": 767.4
+        "name": "英伟达",
+        "change_percent": -4.42,
+        "start_price": 182.47012329101562,
+        "end_price": 174.39999389648438
       },
       "META": {
         "name": "Meta",
-        "change_percent": -8.9,
-        "start_price": 498.5,
-        "end_price": 454.1
+        "change_percent": -12.38,
+        "start_price": 653.0009155273438,
+        "end_price": 572.1300048828125
       },
-      "EA": {
-        "name": "Electronic Arts",
-        "change_percent": -4.2,
-        "start_price": 138.6,
-        "end_price": 132.8
+      "TSLA": {
+        "name": "特斯拉",
+        "change_percent": -7.83,
+        "start_price": 403.32000732421875,
+        "end_price": 371.75
       },
-      "TTWO": {
-        "name": "Take-Two",
-        "change_percent": -5.8,
-        "start_price": 165.3,
-        "end_price": 155.7
-      },
-      "RBLX": {
-        "name": "Roblox",
-        "change_percent": -15.6,
-        "start_price": 42.8,
-        "end_price": 36.1
+      "MSFT": {
+        "name": "微软",
+        "change_percent": -7.12,
+        "start_price": 398.54998779296875,
+        "end_price": 370.1700134277344
       }
     },
     "index_data": {
-      "indices": [
-        {
-          "name": "NASDAQ",
-          "change_percent": -8.5,
-          "start_value": 16280,
-          "end_value": 14895
-        },
-        {
-          "name": "S&P 500",
-          "change_percent": -6.2,
-          "start_value": 5120,
-          "end_value": 4803
-        }
-      ]
+      "name": "标普500",
+      "change_percent": -5.13
     },
-    "ai_analysis": "2026年3月美股科技板块经历显著回调，受美联储鹰派信号及地缘政治紧张局势影响。NVIDIA 跌幅达12.3%，尽管AI芯片需求依然强劲，但估值压力导致获利回吐。Roblox 下跌15.6%，用户增长放缓引发市场担忧。传统游戏公司如EA和Take-Two相对抗跌，受益于稳定的游戏发行周期。建议关注4月初财报及美联储5月利率决议预期。"
+    "ai_analysis": "**📰 2026年3月美国科技板块要闻**\n\n2026年3月美国科技板块整体运行平稳\n\n---\n\n**🏢 公司重要动态**\n\n3月暂无公司重要新闻披露\n",
+    "ai_news_summary": "**📰 2026年3月美国科技板块要闻**\n\n2026年3月美国科技板块整体运行平稳\n\n---\n\n**🏢 公司重要动态**\n\n3月暂无公司重要新闻披露\n",
+    "chart_url": "data/us_2026_03_chart.png"
   },
   "history": []
 }
