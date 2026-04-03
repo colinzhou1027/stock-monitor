@@ -263,13 +263,18 @@ class WebNewsService(LoggerMixin):
         """
         cn_name = self._get_cn_name(stock_name)
         
-        # 构建中文搜索查询
-        if self.market == MARKET_KR:
-            query = f"{stock_name} {cn_name} 韩国游戏 最新消息"
-        elif self.market == MARKET_US:
-            query = f"{stock_name} {cn_name} 美股 最新消息"
+        # 构建中文搜索查询 - 优先使用中文名
+        if cn_name != stock_name:
+            # 有中文名的公司，使用中文名搜索
+            query = f"{cn_name} 最新消息"
         else:
-            query = f"{cn_name} 港股 最新消息"
+            # 没有中文名的公司，加上市场信息
+            if self.market == MARKET_KR:
+                query = f"{stock_name} 韩国 游戏"
+            elif self.market == MARKET_US:
+                query = f"{stock_name} 美股"
+            else:
+                query = f"{stock_name} 港股"
         
         return self.search_duckduckgo(query, max_results)
     
@@ -281,11 +286,11 @@ class WebNewsService(LoggerMixin):
         搜索市场整体新闻（中文）
         """
         if self.market == MARKET_KR:
-            query = "韩国游戏股 KOSPI 游戏行业 最新动态"
+            query = "韩国游戏股 Pearl Abyss Krafton NCsoft"
         elif self.market == MARKET_US:
-            query = "美股科技股 纳斯达克 科技行业 最新动态"
+            query = "美股 苹果 英伟达 特斯拉 微软"
         else:
-            query = "港股科技股 恒生科技 最新动态"
+            query = "港股 腾讯 阿里巴巴 小米 百度"
         
         return self.search_duckduckgo(query, max_results)
     
@@ -341,7 +346,8 @@ class WebNewsService(LoggerMixin):
             reverse=True
         )
         
-        for stock in sorted_stocks[:6]:
+        has_news = False
+        for stock in sorted_stocks[:8]:
             name = stock.get('name', '')
             if not name:
                 continue
@@ -353,7 +359,9 @@ class WebNewsService(LoggerMixin):
             
             stock_news = self.search_stock_news(name, max_results=3)
             
+            # 只显示有新闻的公司，无新闻的跳过
             if stock_news:
+                has_news = True
                 lines.append(f"**{cn_name}**")
                 for news in stock_news[:2]:
                     # 显示内容，不仅仅是标题
@@ -366,10 +374,10 @@ class WebNewsService(LoggerMixin):
                         # 如果没有内容，显示标题
                         lines.append(f"• {news.title}")
                 lines.append("")
-            else:
-                lines.append(f"**{cn_name}**")
-                lines.append(f"• 暂无最新消息")
-                lines.append("")
+        
+        if not has_news:
+            lines.append("暂无公司重要新闻")
+            lines.append("")
         
         return "\n".join(lines)
     
@@ -426,7 +434,8 @@ class WebNewsService(LoggerMixin):
             reverse=True
         )
         
-        for symbol, data in sorted_stocks[:8]:
+        has_news = False
+        for symbol, data in sorted_stocks[:10]:
             name = data.get('name', symbol)
             cn_name = self._get_cn_name(name)
             
@@ -435,7 +444,9 @@ class WebNewsService(LoggerMixin):
             
             stock_news = self.search_stock_news(name, max_results=3)
             
+            # 只显示有新闻的公司，无新闻的跳过
             if stock_news:
+                has_news = True
                 lines.append(f"**{cn_name}**")
                 for news in stock_news[:2]:
                     if news.content:
@@ -446,10 +457,10 @@ class WebNewsService(LoggerMixin):
                     else:
                         lines.append(f"• {news.title}")
                 lines.append("")
-            else:
-                lines.append(f"**{cn_name}**")
-                lines.append(f"• {month}月暂无重要消息披露")
-                lines.append("")
+        
+        if not has_news:
+            lines.append(f"{month}月暂无公司重要新闻披露")
+            lines.append("")
         
         return "\n".join(lines)
 
