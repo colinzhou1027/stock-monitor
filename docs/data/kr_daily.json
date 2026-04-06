@@ -1,72 +1,142 @@
 {
   "latest": {
-    "date": "2026-04-03",
-    "update_time": "2026-04-03 18:05:47",
+    "date": "2026-04-06",
+    "update_time": "2026-04-06 10:30:35",
     "stocks": [
       {
         "symbol": "462870",
         "name": "Shift Up",
-        "prev_close": 32250.0,
-        "prev_prev_close": 33900.0,
-        "change_percent": -4.87,
-        "prev_date": "4/02",
-        "prev_prev_date": "4/01"
+        "prev_close": 33000.0,
+        "prev_prev_close": 32250.0,
+        "change_percent": 2.33,
+        "prev_date": "4/03",
+        "prev_prev_date": "4/02"
       },
       {
         "symbol": "259960",
         "name": "Krafton",
-        "prev_close": 247500.0,
-        "prev_prev_close": 262000.0,
-        "change_percent": -5.53,
-        "prev_date": "4/02",
-        "prev_prev_date": "4/01"
+        "prev_close": 243500.0,
+        "prev_prev_close": 247500.0,
+        "change_percent": -1.62,
+        "prev_date": "4/03",
+        "prev_prev_date": "4/02"
       },
       {
         "symbol": "036570",
         "name": "NCsoft",
-        "prev_close": 213000.0,
-        "prev_prev_close": 229500.0,
-        "change_percent": -7.19,
-        "prev_date": "4/02",
-        "prev_prev_date": "4/01"
+        "prev_close": 211500.0,
+        "prev_prev_close": 213000.0,
+        "change_percent": -0.7,
+        "prev_date": "4/03",
+        "prev_prev_date": "4/02"
       },
       {
         "symbol": "251270",
         "name": "Netmarble",
-        "prev_close": 49000.0,
-        "prev_prev_close": 51400.0,
-        "change_percent": -4.67,
-        "prev_date": "4/02",
-        "prev_prev_date": "4/01"
+        "prev_close": 50000.0,
+        "prev_prev_close": 49000.0,
+        "change_percent": 2.04,
+        "prev_date": "4/03",
+        "prev_prev_date": "4/02"
       },
       {
         "symbol": "225570",
         "name": "Nexon Games",
-        "prev_close": 11440.0,
-        "prev_prev_close": 12020.0,
-        "change_percent": -4.83,
-        "prev_date": "4/02",
-        "prev_prev_date": "4/01"
+        "prev_close": 11360.0,
+        "prev_prev_close": 11440.0,
+        "change_percent": -0.7,
+        "prev_date": "4/03",
+        "prev_prev_date": "4/02"
       },
       {
         "symbol": "263750",
         "name": "Pearl Abyss",
-        "prev_close": 66200.0,
-        "prev_prev_close": 72000.0,
-        "change_percent": -8.06,
-        "prev_date": "4/02",
-        "prev_prev_date": "4/01"
+        "prev_close": 63200.0,
+        "prev_prev_close": 66200.0,
+        "change_percent": -4.53,
+        "prev_date": "4/03",
+        "prev_prev_date": "4/02"
       }
     ],
     "market_index": {
       "name": "KOSPI 200",
-      "prev_close": 78190.0,
-      "prev_prev_close": 82170.0,
-      "change_percent": -4.84,
-      "prev_date": "4/02",
-      "prev_prev_date": "4/01"
+      "prev_close": 80575.0,
+      "prev_prev_close": 78190.0,
+      "change_percent": 3.05,
+      "prev_date": "4/03",
+      "prev_prev_date": "4/02"
     },
-    "ai_analysis": "**📰 今日市场要闻**\n\n**Pearl Abyss Corp. (263750.KQ) 股價、新聞、報價和記錄 ...**\n查看最新的PearlAbyssCorp. (263750.KQ) 股票報價、記錄、新聞及其他重要資訊，助你賣買股票及投資。\n_来源: hk.finance.yahoo.com_\n\n**11家韩国大厂2025年财报：Krafton、ShiftUP大增，NCsoft ...**\n包括ShiftUp、Krafton、Nexon、Netmarble在内的多家韩国核心厂商均已披露了2025年最新的财务数据。 数据显示，韩国头部公司继续放大规模优势，但增长的来源正在从\"本土手游MMO的惯性红利\"，转向\"全球化发行、PC/主机化内容\"。 在2025年，Krafton与Nexon继续巩固头部地位，并在营收规模上与第二梯队拉开更明显的差距。 但与\"狂飙\"叙事并行的，是头部公司在Q4同样暴露出利润率波动、递延确认与一次性因素带来的\"冰火两重天\"。 Shift Up：单产品依赖日益严重.\n_来源: gamelook.com.cn_\n\n**11家韩国大厂2025年财报：Krafton、ShiftUP大增，NCsoft ...**\n包括ShiftUp、Krafton、Nexon、Netmarble在内的多家韩国核心厂商均已披露了2025年最新的财务数据。 数据显示，韩国头部公司继续放大规模优势，但增长的来源正在从\"本土手游MMO的惯性红利\"，转向\"全球化发行、PC/主机化内容\"。 在2025年，Krafton与Nexon继续巩固头部地位，并在营收规模上与第二梯队拉开更明显的差距。 但与\"狂飙\"叙事并行的，是头部公司在Q4同样暴露出利润率波动、递延确认与一次性因素带来的\"冰火两重天\"。 Shift Up：单产品依赖日益严重.\n_来源: news.qq.com_\n\n**11家韩国大厂2025年财报：Krafton、ShiftUP大增，NCsoft ...**\n随着2月即将结束，韩国游戏产业的\"年终大考\"成绩单已悉数出炉。 包括ShiftUp、Krafton、Nexon、Netmarble在内的多家韩国核心厂商均已披露了2025年最新的财务数据。\n_来源: 10100.com_\n\n---\n\n**🏢 公司最新动态**\n\n**Pearl Abyss（珍艾碧丝）**\n• 韩国游戏开发商珍艾碧丝（PearlAbyss）在近期举行的年度股东大会上，由首席执行官Heo Jin-young对外透露了其备受关注新作《红色沙漠》（Crimson Desert）的最新开发进展与未来策略。 此次会议不仅确认了游戏在多平台拓展上的野心，也坦诚了开发过程中所面临的挑战和取舍。 核心信息显示，珍艾碧丝已正式启动《红色沙漠》针对Switch 2平台的研发工作。 这一消息对于关注任天堂下一代主机的玩家和行业观察者而言无疑是一个重要信号，表明《红色沙漠》有望成为Switch 2首批第三方大...\n• IT之家 3 月 27 日消息，韩国游戏公司珍艾碧丝（IT之家注：PearlAbyss）今天召开年度股东大会，首席执行官 Heo Jin-young 在会议中表示，将努力把《红色沙漠》打造成长期受玩家喜爱的作品。\n• 查看最新的PearlAbyssCorp. (263750.KQ) 股票報價、記錄、新聞及其他重要資訊，助你賣買股票及投資。\n\n**NCSoft（恩希软件）**\n• NCsoft宣布，继 《永恒之塔2》 于2025年11月18日在韩服、台服开启公测后，其与另一款虚幻5大作《余烬之都》均计划于2026年下半年正式登陆全球市场，包括通过Steam等主流PC平台面向欧美及亚洲其他地区发行。 此举标志着NCsoft正全力推进其\"次世代MMO出海\"战略。 联手盛趣、腾讯，加速布局中国市场. 在中国市场方面，NCsoft也公布了两项关键合作： 与盛趣游戏达成协议，共同开发 《永恒之塔 1》PC重制版及《永恒之塔》正版手游，目标于2026年在中国大陆推出； 与腾讯合作的《...\n• 据韩媒prtimes报道，发行商NCSOFT和开发子公司BigFire Games的MMO战术射击新作《Project LLL》正式命名为《CINDER CITY》，并且 官方网站 同步上线。 本作采用虚幻引擎5打造，以动态视觉效果与无缝开放世界为特色，构建了一个23世纪未来科技与21世纪现实共存的架空科幻世界观。 游戏以现实中的韩国三成洞、论岘洞等真实地域为蓝本，描绘出衰败的未来首尔都市舞台，并呈现还原枪械运作原理的真实战斗体验。\n• 从Lineage、AION、劍靈、THRONE AND LIBERTY等MMORPG，到休闲、射击、动作游戏，让丰富的乐趣连接世界。\n\n**Krafton（蓝洞）**\n• 以《PUBG》闻名的韩国游戏巨头Krafton正式宣布，已斥资9600万美元完成对动作角色扮演游戏《最后的纪元》（Last Epoch）开发商Eleventh Hour Games（EHG）的100%股权收购。 而此次全盘收购也意味着，此前作为EHG投资方之一的腾讯已完全退出其直接持股。 根据官方声明，Krafton旨在通过此次收购，获得一个在ARPG领域具有竞争力的特许经营权IP，并进一步巩固其在全球市场的地位。 Krafton企业发展主管MariaPark对此表示：\"我们很高兴欢迎Eleve...\n• 2018年，蓝洞成立了Krafton作为其所有工作室的控股公司，同时保留了\"蓝洞\"这一工作室名称，而Krafton则成为了整体的母公司。 未来，Krafton表示将会公布更多关于其工作室体系的消息，特别是关于母公司与各个工作室之间的合作模式和发展策略。\n• 株式会社魁匠团（KRAFTON）是2007年3月成立的韩国游戏开发公司，总部位于首尔特别市江南区，主营网络游戏研发。 该公司由NCsoft前员工组建，代表作品包括《TERA》《绝地求生》（PUBG）等。 2024年公司宣布重组为\"AI优先\"公司，计划投资1000亿韩元建设GPU集群。\n\n**Shift Up**\n• 4月1日，韩国游戏开发商Shift Up正式宣布，已完成对日本游戏开发工作室UNBOUND Inc.的全部股份收购。这意味着曾打造《生化危机》《鬼泣》《恶灵附身 ...\n• 17173 新闻导语 日前，韩国游戏公司ShiftUp正式宣布，已完成对日本游戏开发商 Unbound Games 全部股份的收购。\n• 今日（4月1日），韩国游戏开发商Shift Up正式宣布，已完成对日本游戏开发工作室UNBOUND Inc.的全部股份收购。 这意味着曾打造《生化危机》《鬼泣》《恶灵附身》《大神》等全球知名作品的传奇制作人三上真司，携其核心团队正式加入ShiftUp体系。\n\n**Nexon Games**\n• 据韩媒Daily Game报道，Nexon Games旗下《Durango》IP的新作项目其最新游戏名称已确定为《Durango世界》。\n• 2026年3月30日消息，暴雪娱乐今日在《守望先锋》韩服官网发布重磅公告：为了给韩国玩家提供更深度的本土化体验，暴雪已正式与韩国游戏巨头Nexon达成战略合作伙伴关系。\n• 暴雪与Nexon合作，2026年《守望先锋》韩服PC版（不含Steam）更换运营商!账号数据完整保留，Nexon将推韩国专属内容与福利，提升本地化体验。\n\n**Netmarble（网石）**\n• Experience Game of Thrones as an action adventure RPG! The legend of King Arthur roars to life in this strategic squad RPG!\n• 外界对网石 (Netmarble)下一批新作的期待正在升温。 继人气作品《我独自升级:ARISE》取得佳绩后,续作《我独自升级:业力》即将发布,被认为有望超越前作。 通过扩大知识产权 (IP)并突出手动操作的乐趣,网石 (Netmarble)计划吸引更多用户并为未来增长注入新动力。\n• 同时Netmarble也是引领休闲游戏大厂Jam City的最大股东，以及全球顶级大型多人在线免费游戏开发商Kabam的母公司。Netmarble将始终保持与玩家们的互动，为了可以源源不断地提供高品质游戏产品，我们会不断提升自身对于全球游戏文化的理解与技术实力。\n"
+    "ai_analysis": "| 公司 | 新闻内容 |\n|:----:|:-----|\n| 🌐 大盘 | 板块整体小幅下跌，2涨4跌 |\n| 🎮 Shift Up | 2026年04月03日小幅上涨2.33% |\n| 🎮 Krafton | 2026年04月03日微幅下跌1.62% |\n| 🎮 NCsoft | 2026年04月03日微幅下跌0.70% |\n| 🎮 Netmarble | • Netmarble Corp stock: Gaming powerhouse or volatile bet? |\n| 🎮 Nexon Games | • Nexon Co Ltd stock: Why gaming powerhouse draws global inves... |\n| 🎮 Pearl Abyss | 2026年04月03日小幅下跌4.53% |"
   },
-  "history": []
+  "history": [
+    {
+      "date": "2026-04-03",
+      "update_time": "2026-04-03 18:05:47",
+      "stocks": [
+        {
+          "symbol": "462870",
+          "name": "Shift Up",
+          "prev_close": 32250.0,
+          "prev_prev_close": 33900.0,
+          "change_percent": -4.87,
+          "prev_date": "4/02",
+          "prev_prev_date": "4/01"
+        },
+        {
+          "symbol": "259960",
+          "name": "Krafton",
+          "prev_close": 247500.0,
+          "prev_prev_close": 262000.0,
+          "change_percent": -5.53,
+          "prev_date": "4/02",
+          "prev_prev_date": "4/01"
+        },
+        {
+          "symbol": "036570",
+          "name": "NCsoft",
+          "prev_close": 213000.0,
+          "prev_prev_close": 229500.0,
+          "change_percent": -7.19,
+          "prev_date": "4/02",
+          "prev_prev_date": "4/01"
+        },
+        {
+          "symbol": "251270",
+          "name": "Netmarble",
+          "prev_close": 49000.0,
+          "prev_prev_close": 51400.0,
+          "change_percent": -4.67,
+          "prev_date": "4/02",
+          "prev_prev_date": "4/01"
+        },
+        {
+          "symbol": "225570",
+          "name": "Nexon Games",
+          "prev_close": 11440.0,
+          "prev_prev_close": 12020.0,
+          "change_percent": -4.83,
+          "prev_date": "4/02",
+          "prev_prev_date": "4/01"
+        },
+        {
+          "symbol": "263750",
+          "name": "Pearl Abyss",
+          "prev_close": 66200.0,
+          "prev_prev_close": 72000.0,
+          "change_percent": -8.06,
+          "prev_date": "4/02",
+          "prev_prev_date": "4/01"
+        }
+      ],
+      "market_index": {
+        "name": "KOSPI 200",
+        "prev_close": 78190.0,
+        "prev_prev_close": 82170.0,
+        "change_percent": -4.84,
+        "prev_date": "4/02",
+        "prev_prev_date": "4/01"
+      },
+      "ai_analysis": "**📰 今日市场要闻**\n\n**Pearl Abyss Corp. (263750.KQ) 股價、新聞、報價和記錄 ...**\n查看最新的PearlAbyssCorp. (263750.KQ) 股票報價、記錄、新聞及其他重要資訊，助你賣買股票及投資。\n_来源: hk.finance.yahoo.com_\n\n**11家韩国大厂2025年财报：Krafton、ShiftUP大增，NCsoft ...**\n包括ShiftUp、Krafton、Nexon、Netmarble在内的多家韩国核心厂商均已披露了2025年最新的财务数据。 数据显示，韩国头部公司继续放大规模优势，但增长的来源正在从\"本土手游MMO的惯性红利\"，转向\"全球化发行、PC/主机化内容\"。 在2025年，Krafton与Nexon继续巩固头部地位，并在营收规模上与第二梯队拉开更明显的差距。 但与\"狂飙\"叙事并行的，是头部公司在Q4同样暴露出利润率波动、递延确认与一次性因素带来的\"冰火两重天\"。 Shift Up：单产品依赖日益严重.\n_来源: gamelook.com.cn_\n\n**11家韩国大厂2025年财报：Krafton、ShiftUP大增，NCsoft ...**\n包括ShiftUp、Krafton、Nexon、Netmarble在内的多家韩国核心厂商均已披露了2025年最新的财务数据。 数据显示，韩国头部公司继续放大规模优势，但增长的来源正在从\"本土手游MMO的惯性红利\"，转向\"全球化发行、PC/主机化内容\"。 在2025年，Krafton与Nexon继续巩固头部地位，并在营收规模上与第二梯队拉开更明显的差距。 但与\"狂飙\"叙事并行的，是头部公司在Q4同样暴露出利润率波动、递延确认与一次性因素带来的\"冰火两重天\"。 Shift Up：单产品依赖日益严重.\n_来源: news.qq.com_\n\n**11家韩国大厂2025年财报：Krafton、ShiftUP大增，NCsoft ...**\n随着2月即将结束，韩国游戏产业的\"年终大考\"成绩单已悉数出炉。 包括ShiftUp、Krafton、Nexon、Netmarble在内的多家韩国核心厂商均已披露了2025年最新的财务数据。\n_来源: 10100.com_\n\n---\n\n**🏢 公司最新动态**\n\n**Pearl Abyss（珍艾碧丝）**\n• 韩国游戏开发商珍艾碧丝（PearlAbyss）在近期举行的年度股东大会上，由首席执行官Heo Jin-young对外透露了其备受关注新作《红色沙漠》（Crimson Desert）的最新开发进展与未来策略。 此次会议不仅确认了游戏在多平台拓展上的野心，也坦诚了开发过程中所面临的挑战和取舍。 核心信息显示，珍艾碧丝已正式启动《红色沙漠》针对Switch 2平台的研发工作。 这一消息对于关注任天堂下一代主机的玩家和行业观察者而言无疑是一个重要信号，表明《红色沙漠》有望成为Switch 2首批第三方大...\n• IT之家 3 月 27 日消息，韩国游戏公司珍艾碧丝（IT之家注：PearlAbyss）今天召开年度股东大会，首席执行官 Heo Jin-young 在会议中表示，将努力把《红色沙漠》打造成长期受玩家喜爱的作品。\n• 查看最新的PearlAbyssCorp. (263750.KQ) 股票報價、記錄、新聞及其他重要資訊，助你賣買股票及投資。\n\n**NCSoft（恩希软件）**\n• NCsoft宣布，继 《永恒之塔2》 于2025年11月18日在韩服、台服开启公测后，其与另一款虚幻5大作《余烬之都》均计划于2026年下半年正式登陆全球市场，包括通过Steam等主流PC平台面向欧美及亚洲其他地区发行。 此举标志着NCsoft正全力推进其\"次世代MMO出海\"战略。 联手盛趣、腾讯，加速布局中国市场. 在中国市场方面，NCsoft也公布了两项关键合作： 与盛趣游戏达成协议，共同开发 《永恒之塔 1》PC重制版及《永恒之塔》正版手游，目标于2026年在中国大陆推出； 与腾讯合作的《...\n• 据韩媒prtimes报道，发行商NCSOFT和开发子公司BigFire Games的MMO战术射击新作《Project LLL》正式命名为《CINDER CITY》，并且 官方网站 同步上线。 本作采用虚幻引擎5打造，以动态视觉效果与无缝开放世界为特色，构建了一个23世纪未来科技与21世纪现实共存的架空科幻世界观。 游戏以现实中的韩国三成洞、论岘洞等真实地域为蓝本，描绘出衰败的未来首尔都市舞台，并呈现还原枪械运作原理的真实战斗体验。\n• 从Lineage、AION、劍靈、THRONE AND LIBERTY等MMORPG，到休闲、射击、动作游戏，让丰富的乐趣连接世界。\n\n**Krafton（蓝洞）**\n• 以《PUBG》闻名的韩国游戏巨头Krafton正式宣布，已斥资9600万美元完成对动作角色扮演游戏《最后的纪元》（Last Epoch）开发商Eleventh Hour Games（EHG）的100%股权收购。 而此次全盘收购也意味着，此前作为EHG投资方之一的腾讯已完全退出其直接持股。 根据官方声明，Krafton旨在通过此次收购，获得一个在ARPG领域具有竞争力的特许经营权IP，并进一步巩固其在全球市场的地位。 Krafton企业发展主管MariaPark对此表示：\"我们很高兴欢迎Eleve...\n• 2018年，蓝洞成立了Krafton作为其所有工作室的控股公司，同时保留了\"蓝洞\"这一工作室名称，而Krafton则成为了整体的母公司。 未来，Krafton表示将会公布更多关于其工作室体系的消息，特别是关于母公司与各个工作室之间的合作模式和发展策略。\n• 株式会社魁匠团（KRAFTON）是2007年3月成立的韩国游戏开发公司，总部位于首尔特别市江南区，主营网络游戏研发。 该公司由NCsoft前员工组建，代表作品包括《TERA》《绝地求生》（PUBG）等。 2024年公司宣布重组为\"AI优先\"公司，计划投资1000亿韩元建设GPU集群。\n\n**Shift Up**\n• 4月1日，韩国游戏开发商Shift Up正式宣布，已完成对日本游戏开发工作室UNBOUND Inc.的全部股份收购。这意味着曾打造《生化危机》《鬼泣》《恶灵附身 ...\n• 17173 新闻导语 日前，韩国游戏公司ShiftUp正式宣布，已完成对日本游戏开发商 Unbound Games 全部股份的收购。\n• 今日（4月1日），韩国游戏开发商Shift Up正式宣布，已完成对日本游戏开发工作室UNBOUND Inc.的全部股份收购。 这意味着曾打造《生化危机》《鬼泣》《恶灵附身》《大神》等全球知名作品的传奇制作人三上真司，携其核心团队正式加入ShiftUp体系。\n\n**Nexon Games**\n• 据韩媒Daily Game报道，Nexon Games旗下《Durango》IP的新作项目其最新游戏名称已确定为《Durango世界》。\n• 2026年3月30日消息，暴雪娱乐今日在《守望先锋》韩服官网发布重磅公告：为了给韩国玩家提供更深度的本土化体验，暴雪已正式与韩国游戏巨头Nexon达成战略合作伙伴关系。\n• 暴雪与Nexon合作，2026年《守望先锋》韩服PC版（不含Steam）更换运营商!账号数据完整保留，Nexon将推韩国专属内容与福利，提升本地化体验。\n\n**Netmarble（网石）**\n• Experience Game of Thrones as an action adventure RPG! The legend of King Arthur roars to life in this strategic squad RPG!\n• 外界对网石 (Netmarble)下一批新作的期待正在升温。 继人气作品《我独自升级:ARISE》取得佳绩后,续作《我独自升级:业力》即将发布,被认为有望超越前作。 通过扩大知识产权 (IP)并突出手动操作的乐趣,网石 (Netmarble)计划吸引更多用户并为未来增长注入新动力。\n• 同时Netmarble也是引领休闲游戏大厂Jam City的最大股东，以及全球顶级大型多人在线免费游戏开发商Kabam的母公司。Netmarble将始终保持与玩家们的互动，为了可以源源不断地提供高品质游戏产品，我们会不断提升自身对于全球游戏文化的理解与技术实力。\n"
+    }
+  ]
 }
