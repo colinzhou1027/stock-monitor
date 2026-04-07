@@ -522,10 +522,17 @@ function renderTable(lines) {
 }
 
 // 渲染 AI 分析面板
+// 注意：暂时禁用 AI 分析显示，但保留代码以便将来使用
 function renderAIPanel(analysis, containerId) {
   const container = document.getElementById(containerId);
   if (!container) return;
   
+  // 暂时隐藏 AI 分析面板
+  container.style.display = 'none';
+  return;
+  
+  // === 以下代码暂时禁用，保留以便将来使用 ===
+  /*
   if (!analysis) {
     container.innerHTML = `
       <div class="ai-panel">
@@ -565,6 +572,7 @@ function renderAIPanel(analysis, containerId) {
       </div>
     </div>
   `;
+  */
 }
 
 // 切换 AI 面板展开/收起
@@ -640,7 +648,7 @@ async function renderMonthlySection(market, containerId) {
   }
   
   html += '</div>';
-  
+   
   // 个股月度表现
   if (data.stock_data) {
     const stocks = Object.entries(data.stock_data)
@@ -672,6 +680,8 @@ async function renderMonthlySection(market, containerId) {
     html += '</tbody></table></div>';
   }
   
+  // === AI 月度分析和新闻汇总暂时禁用，保留代码以便将来使用 ===
+  /*
   // AI 月度分析
   if (data.ai_analysis) {
     html += `
@@ -695,6 +705,7 @@ async function renderMonthlySection(market, containerId) {
       </div>
     `;
   }
+  */
   
   container.innerHTML = html;
 }
