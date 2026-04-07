@@ -1,124 +1,240 @@
 {
   "latest": {
-    "date": "2026-04-06",
-    "update_time": "2026-04-06 10:32:28",
+    "date": "2026-04-07",
+    "update_time": "2026-04-07 10:32:22",
     "stocks": [
       {
         "symbol": "AAPL",
         "name": "苹果",
-        "prev_close": 255.9199981689453,
-        "prev_prev_close": 255.6300048828125,
-        "change_percent": 0.11,
-        "prev_date": "4/02",
-        "prev_prev_date": "4/01"
+        "prev_close": 258.8599853515625,
+        "prev_prev_close": 255.9199981689453,
+        "change_percent": 1.15,
+        "prev_date": "4/06",
+        "prev_prev_date": "4/02"
       },
       {
         "symbol": "GOOGL",
         "name": "谷歌",
-        "prev_close": 295.7699890136719,
-        "prev_prev_close": 297.3900146484375,
-        "change_percent": -0.54,
-        "prev_date": "4/02",
-        "prev_prev_date": "4/01"
+        "prev_close": 299.989990234375,
+        "prev_prev_close": 295.7699890136719,
+        "change_percent": 1.43,
+        "prev_date": "4/06",
+        "prev_prev_date": "4/02"
       },
       {
         "symbol": "AMZN",
         "name": "亚马逊",
-        "prev_close": 209.77000427246094,
-        "prev_prev_close": 210.57000732421875,
-        "change_percent": -0.38,
-        "prev_date": "4/02",
-        "prev_prev_date": "4/01"
+        "prev_close": 212.7899932861328,
+        "prev_prev_close": 209.77000427246094,
+        "change_percent": 1.44,
+        "prev_date": "4/06",
+        "prev_prev_date": "4/02"
       },
       {
         "symbol": "NVDA",
         "name": "英伟达",
-        "prev_close": 177.38999938964844,
-        "prev_prev_close": 175.75,
-        "change_percent": 0.93,
-        "prev_date": "4/02",
-        "prev_prev_date": "4/01"
+        "prev_close": 177.63999938964844,
+        "prev_prev_close": 177.38999938964844,
+        "change_percent": 0.14,
+        "prev_date": "4/06",
+        "prev_prev_date": "4/02"
       },
       {
         "symbol": "META",
         "name": "Meta",
-        "prev_close": 574.4600219726562,
-        "prev_prev_close": 579.22998046875,
-        "change_percent": -0.82,
-        "prev_date": "4/02",
-        "prev_prev_date": "4/01"
+        "prev_close": 573.02001953125,
+        "prev_prev_close": 574.4600219726562,
+        "change_percent": -0.25,
+        "prev_date": "4/06",
+        "prev_prev_date": "4/02"
       },
       {
         "symbol": "TSLA",
         "name": "特斯拉",
-        "prev_close": 360.5899963378906,
-        "prev_prev_close": 381.260009765625,
-        "change_percent": -5.42,
-        "prev_date": "4/02",
-        "prev_prev_date": "4/01"
+        "prev_close": 352.82000732421875,
+        "prev_prev_close": 360.5899963378906,
+        "change_percent": -2.15,
+        "prev_date": "4/06",
+        "prev_prev_date": "4/02"
       },
       {
         "symbol": "MSFT",
         "name": "微软",
-        "prev_close": 373.4599914550781,
-        "prev_prev_close": 369.3699951171875,
-        "change_percent": 1.11,
-        "prev_date": "4/02",
-        "prev_prev_date": "4/01"
+        "prev_close": 372.8800048828125,
+        "prev_prev_close": 373.4599914550781,
+        "change_percent": -0.16,
+        "prev_date": "4/06",
+        "prev_prev_date": "4/02"
       },
       {
         "symbol": "EA",
         "name": "艺电",
-        "prev_close": 203.60000610351562,
-        "prev_prev_close": 203.5800018310547,
-        "change_percent": 0.01,
-        "prev_date": "4/02",
-        "prev_prev_date": "4/01"
+        "prev_close": 204.16000366210938,
+        "prev_prev_close": 203.60000610351562,
+        "change_percent": 0.28,
+        "prev_date": "4/06",
+        "prev_prev_date": "4/02"
       },
       {
         "symbol": "TTWO",
         "name": "Take-Two",
-        "prev_close": 199.8699951171875,
-        "prev_prev_close": 198.1999969482422,
-        "change_percent": 0.84,
-        "prev_date": "4/02",
-        "prev_prev_date": "4/01"
+        "prev_close": 196.69000244140625,
+        "prev_prev_close": 199.8699951171875,
+        "change_percent": -1.59,
+        "prev_date": "4/06",
+        "prev_prev_date": "4/02"
       },
       {
         "symbol": "RBLX",
         "name": "Roblox",
-        "prev_close": 60.11000061035156,
-        "prev_prev_close": 57.630001068115234,
-        "change_percent": 4.3,
-        "prev_date": "4/02",
-        "prev_prev_date": "4/01"
+        "prev_close": 57.20000076293945,
+        "prev_prev_close": 60.11000061035156,
+        "change_percent": -4.84,
+        "prev_date": "4/06",
+        "prev_prev_date": "4/02"
       },
       {
         "symbol": "U",
         "name": "Unity",
-        "prev_close": 22.75,
-        "prev_prev_close": 21.959999084472656,
-        "change_percent": 3.6,
-        "prev_date": "4/02",
-        "prev_prev_date": "4/01"
+        "prev_close": 21.989999771118164,
+        "prev_prev_close": 22.75,
+        "change_percent": -3.34,
+        "prev_date": "4/06",
+        "prev_prev_date": "4/02"
       }
     ],
     "indices": [
       {
         "name": "标普500",
-        "prev_close": 6582.68994140625,
-        "prev_prev_close": 6575.31982421875,
-        "change_percent": 0.11,
-        "prev_date": "4/02",
-        "prev_prev_date": "4/01"
+        "prev_close": 6611.830078125,
+        "prev_prev_close": 6582.68994140625,
+        "change_percent": 0.44,
+        "prev_date": "4/06",
+        "prev_prev_date": "4/02"
       }
     ],
-    "ai_analysis": "| 公司 | 新闻内容 |\n|:----:|:-----|\n| 🌐 大盘 | 2026年04月02日，标普500上涨0.11% |\n| 💻 苹果 | 2026年04月02日微幅上涨0.11% |\n| 💻 谷歌 | 2026年04月02日微幅下跌0.54% |\n| 💻 亚马逊 | 2026年04月02日微幅下跌0.38% |\n| 💻 英伟达 | • Trading expert sets date when Nvidia stock will crash to $11... • Where Will Nvidia Stock Be in 5 Years? |\n| 💻 Meta | • Best Stock to Buy: Microsoft Stock or Meta Stock? • Why Meta's \"Bellwether\" Legal Loss Could Open up a Can of Wo... |\n| 💻 特斯拉 | • Tesla Stock Keeps Falling - But 10% Lower TSLA Puts Yield 2.... • Prediction: Tesla Stock Is a Buy Before 2029 Due to This $10... |\n| 💻 微软 | • If Microsoft Get This One Thing Right, the Stock Could Explo... • Microsoft: A Stock to Avoid or a Once-in-a-Decade Buying Opp... |\n| 🎮 艺电 | 2026年04月02日微幅上涨0.01% |\n| 🎮 Take-Two | • DA Davidson reiterates Buy on Take-Two stock on NBA 2K stren... • Take-Two Interactive Software, Inc. $TTWO Stock Holdings Dec... |\n| 🎮 Roblox | • Is Roblox (RBLX) Balancing Engagement Headwinds With Its Lon... • Roblox (RBLX) CEO Baszucki converts 2.7M Class B shares into... |\n| 🎮 Unity | • Unity Software Stock Surges 33%, With A 5-Day Winning Spree • Unity Software (U) Is Up 32.8% After Exiting Legacy Ads To R... |",
-    "holidays": [
-      "2026-04-03"
-    ]
+    "ai_analysis": "| 公司 | 新闻内容 |\n|:----:|:-----|\n| 🌐 大盘 | 标普500上涨0.44%。• Technology Stock Performance |\n| 💻 苹果 | 2026年04月06日微幅上涨1.15% |\n| 💻 谷歌 | 2026年04月06日微幅上涨1.43% |\n| 💻 亚马逊 | 2026年04月06日微幅上涨1.44% |\n| 💻 英伟达 | 2026年04月06日微幅上涨0.14% |\n| 💻 Meta | 2026年04月06日微幅下跌0.25% |\n| 💻 特斯拉 | • Tesla Might Have a Free Cash Flow Problem, Analyst Says. Wha... • Apple’s Record $143 Billion Quarter Exposes Just How Far Tes... |\n| 💻 微软 | 2026年04月06日微幅下跌0.16% |\n| 🎮 艺电 | 2026年04月06日微幅上涨0.28% |\n| 🎮 Take-Two | • Take-Two Interactive (TTWO) Stock Drops Despite Market Gains... • symbol__ Stock Quote Price and Forecast |\n| 🎮 Roblox | • Wells Fargo cuts Roblox stock price target on 2Q bookings co... • Roblox Stock Stumbles as Analyst Slashes Target |\n| 🎮 Unity | • Unity Software Inc. (U) Stock Sinks As Market Gains: What Yo... • Unity Software stock rated Market Outperform at Citizens, $3... |"
   },
   "history": [
+    {
+      "date": "2026-04-06",
+      "update_time": "2026-04-06 10:32:28",
+      "stocks": [
+        {
+          "symbol": "AAPL",
+          "name": "苹果",
+          "prev_close": 255.9199981689453,
+          "prev_prev_close": 255.6300048828125,
+          "change_percent": 0.11,
+          "prev_date": "4/02",
+          "prev_prev_date": "4/01"
+        },
+        {
+          "symbol": "GOOGL",
+          "name": "谷歌",
+          "prev_close": 295.7699890136719,
+          "prev_prev_close": 297.3900146484375,
+          "change_percent": -0.54,
+          "prev_date": "4/02",
+          "prev_prev_date": "4/01"
+        },
+        {
+          "symbol": "AMZN",
+          "name": "亚马逊",
+          "prev_close": 209.77000427246094,
+          "prev_prev_close": 210.57000732421875,
+          "change_percent": -0.38,
+          "prev_date": "4/02",
+          "prev_prev_date": "4/01"
+        },
+        {
+          "symbol": "NVDA",
+          "name": "英伟达",
+          "prev_close": 177.38999938964844,
+          "prev_prev_close": 175.75,
+          "change_percent": 0.93,
+          "prev_date": "4/02",
+          "prev_prev_date": "4/01"
+        },
+        {
+          "symbol": "META",
+          "name": "Meta",
+          "prev_close": 574.4600219726562,
+          "prev_prev_close": 579.22998046875,
+          "change_percent": -0.82,
+          "prev_date": "4/02",
+          "prev_prev_date": "4/01"
+        },
+        {
+          "symbol": "TSLA",
+          "name": "特斯拉",
+          "prev_close": 360.5899963378906,
+          "prev_prev_close": 381.260009765625,
+          "change_percent": -5.42,
+          "prev_date": "4/02",
+          "prev_prev_date": "4/01"
+        },
+        {
+          "symbol": "MSFT",
+          "name": "微软",
+          "prev_close": 373.4599914550781,
+          "prev_prev_close": 369.3699951171875,
+          "change_percent": 1.11,
+          "prev_date": "4/02",
+          "prev_prev_date": "4/01"
+        },
+        {
+          "symbol": "EA",
+          "name": "艺电",
+          "prev_close": 203.60000610351562,
+          "prev_prev_close": 203.5800018310547,
+          "change_percent": 0.01,
+          "prev_date": "4/02",
+          "prev_prev_date": "4/01"
+        },
+        {
+          "symbol": "TTWO",
+          "name": "Take-Two",
+          "prev_close": 199.8699951171875,
+          "prev_prev_close": 198.1999969482422,
+          "change_percent": 0.84,
+          "prev_date": "4/02",
+          "prev_prev_date": "4/01"
+        },
+        {
+          "symbol": "RBLX",
+          "name": "Roblox",
+          "prev_close": 60.11000061035156,
+          "prev_prev_close": 57.630001068115234,
+          "change_percent": 4.3,
+          "prev_date": "4/02",
+          "prev_prev_date": "4/01"
+        },
+        {
+          "symbol": "U",
+          "name": "Unity",
+          "prev_close": 22.75,
+          "prev_prev_close": 21.959999084472656,
+          "change_percent": 3.6,
+          "prev_date": "4/02",
+          "prev_prev_date": "4/01"
+        }
+      ],
+      "indices": [
+        {
+          "name": "标普500",
+          "prev_close": 6582.68994140625,
+          "prev_prev_close": 6575.31982421875,
+          "change_percent": 0.11,
+          "prev_date": "4/02",
+          "prev_prev_date": "4/01"
+        }
+      ],
+      "ai_analysis": "| 公司 | 新闻内容 |\n|:----:|:-----|\n| 🌐 大盘 | 2026年04月02日，标普500上涨0.11% |\n| 💻 苹果 | 2026年04月02日微幅上涨0.11% |\n| 💻 谷歌 | 2026年04月02日微幅下跌0.54% |\n| 💻 亚马逊 | 2026年04月02日微幅下跌0.38% |\n| 💻 英伟达 | • Trading expert sets date when Nvidia stock will crash to $11... • Where Will Nvidia Stock Be in 5 Years? |\n| 💻 Meta | • Best Stock to Buy: Microsoft Stock or Meta Stock? • Why Meta's \"Bellwether\" Legal Loss Could Open up a Can of Wo... |\n| 💻 特斯拉 | • Tesla Stock Keeps Falling - But 10% Lower TSLA Puts Yield 2.... • Prediction: Tesla Stock Is a Buy Before 2029 Due to This $10... |\n| 💻 微软 | • If Microsoft Get This One Thing Right, the Stock Could Explo... • Microsoft: A Stock to Avoid or a Once-in-a-Decade Buying Opp... |\n| 🎮 艺电 | 2026年04月02日微幅上涨0.01% |\n| 🎮 Take-Two | • DA Davidson reiterates Buy on Take-Two stock on NBA 2K stren... • Take-Two Interactive Software, Inc. $TTWO Stock Holdings Dec... |\n| 🎮 Roblox | • Is Roblox (RBLX) Balancing Engagement Headwinds With Its Lon... • Roblox (RBLX) CEO Baszucki converts 2.7M Class B shares into... |\n| 🎮 Unity | • Unity Software Stock Surges 33%, With A 5-Day Winning Spree • Unity Software (U) Is Up 32.8% After Exiting Legacy Ads To R... |",
+      "holidays": [
+        "2026-04-03"
+      ]
+    },
     {
       "date": "2026-04-03",
       "update_time": "2026-04-03 18:08:37",
