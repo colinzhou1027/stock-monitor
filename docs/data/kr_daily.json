@@ -1,74 +1,143 @@
 {
   "latest": {
-    "date": "2026-04-06",
-    "update_time": "2026-04-06 10:30:35",
+    "date": "2026-04-07",
+    "update_time": "2026-04-07 10:30:35",
     "stocks": [
       {
         "symbol": "462870",
         "name": "Shift Up",
-        "prev_close": 33000.0,
-        "prev_prev_close": 32250.0,
-        "change_percent": 2.33,
-        "prev_date": "4/03",
-        "prev_prev_date": "4/02"
+        "prev_close": 32900.0,
+        "prev_prev_close": 33000.0,
+        "change_percent": -0.3,
+        "prev_date": "4/06",
+        "prev_prev_date": "4/03"
       },
       {
         "symbol": "259960",
         "name": "Krafton",
-        "prev_close": 243500.0,
-        "prev_prev_close": 247500.0,
-        "change_percent": -1.62,
-        "prev_date": "4/03",
-        "prev_prev_date": "4/02"
+        "prev_close": 236500.0,
+        "prev_prev_close": 243500.0,
+        "change_percent": -2.87,
+        "prev_date": "4/06",
+        "prev_prev_date": "4/03"
       },
       {
         "symbol": "036570",
         "name": "NCsoft",
-        "prev_close": 211500.0,
-        "prev_prev_close": 213000.0,
-        "change_percent": -0.7,
-        "prev_date": "4/03",
-        "prev_prev_date": "4/02"
+        "prev_close": 213000.0,
+        "prev_prev_close": 211500.0,
+        "change_percent": 0.71,
+        "prev_date": "4/06",
+        "prev_prev_date": "4/03"
       },
       {
         "symbol": "251270",
         "name": "Netmarble",
-        "prev_close": 50000.0,
-        "prev_prev_close": 49000.0,
-        "change_percent": 2.04,
-        "prev_date": "4/03",
-        "prev_prev_date": "4/02"
+        "prev_close": 49700.0,
+        "prev_prev_close": 50000.0,
+        "change_percent": -0.6,
+        "prev_date": "4/06",
+        "prev_prev_date": "4/03"
       },
       {
         "symbol": "225570",
         "name": "Nexon Games",
         "prev_close": 11360.0,
-        "prev_prev_close": 11440.0,
-        "change_percent": -0.7,
-        "prev_date": "4/03",
-        "prev_prev_date": "4/02"
+        "prev_prev_close": 11360.0,
+        "change_percent": 0.0,
+        "prev_date": "4/06",
+        "prev_prev_date": "4/03"
       },
       {
         "symbol": "263750",
         "name": "Pearl Abyss",
-        "prev_close": 63200.0,
-        "prev_prev_close": 66200.0,
-        "change_percent": -4.53,
-        "prev_date": "4/03",
-        "prev_prev_date": "4/02"
+        "prev_close": 60200.0,
+        "prev_prev_close": 63200.0,
+        "change_percent": -4.75,
+        "prev_date": "4/06",
+        "prev_prev_date": "4/03"
       }
     ],
     "market_index": {
       "name": "KOSPI 200",
-      "prev_close": 80575.0,
-      "prev_prev_close": 78190.0,
-      "change_percent": 3.05,
-      "prev_date": "4/03",
-      "prev_prev_date": "4/02"
+      "prev_close": 81750.0,
+      "prev_prev_close": 80575.0,
+      "change_percent": 1.46,
+      "prev_date": "4/06",
+      "prev_prev_date": "4/03"
     },
-    "ai_analysis": "| 公司 | 新闻内容 |\n|:----:|:-----|\n| 🌐 大盘 | 板块整体小幅下跌，2涨4跌 |\n| 🎮 Shift Up | 2026年04月03日小幅上涨2.33% |\n| 🎮 Krafton | 2026年04月03日微幅下跌1.62% |\n| 🎮 NCsoft | 2026年04月03日微幅下跌0.70% |\n| 🎮 Netmarble | • Netmarble Corp stock: Gaming powerhouse or volatile bet? |\n| 🎮 Nexon Games | • Nexon Co Ltd stock: Why gaming powerhouse draws global inves... |\n| 🎮 Pearl Abyss | 2026年04月03日小幅下跌4.53% |"
+    "ai_analysis": "| 公司 | 新闻内容 |\n|:----:|:-----|\n| 🌐 大盘 | 板块整体走弱，1涨5跌 |\n| 🎮 Shift Up | 2026年04月06日微幅下跌0.30% |\n| 🎮 Krafton | 2026年04月06日小幅下跌2.87% |\n| 🎮 NCsoft | 2026年04月06日微幅上涨0.71% |\n| 🎮 Netmarble | 2026年04月06日微幅下跌0.60% |\n| 🎮 Nexon Games | • Nexon Co Ltd stock: Why gaming powerhouse draws global inves... |\n| 🎮 Pearl Abyss | 2026年04月06日小幅下跌4.75% |"
   },
   "history": [
+    {
+      "date": "2026-04-06",
+      "update_time": "2026-04-06 10:30:35",
+      "stocks": [
+        {
+          "symbol": "462870",
+          "name": "Shift Up",
+          "prev_close": 33000.0,
+          "prev_prev_close": 32250.0,
+          "change_percent": 2.33,
+          "prev_date": "4/03",
+          "prev_prev_date": "4/02"
+        },
+        {
+          "symbol": "259960",
+          "name": "Krafton",
+          "prev_close": 243500.0,
+          "prev_prev_close": 247500.0,
+          "change_percent": -1.62,
+          "prev_date": "4/03",
+          "prev_prev_date": "4/02"
+        },
+        {
+          "symbol": "036570",
+          "name": "NCsoft",
+          "prev_close": 211500.0,
+          "prev_prev_close": 213000.0,
+          "change_percent": -0.7,
+          "prev_date": "4/03",
+          "prev_prev_date": "4/02"
+        },
+        {
+          "symbol": "251270",
+          "name": "Netmarble",
+          "prev_close": 50000.0,
+          "prev_prev_close": 49000.0,
+          "change_percent": 2.04,
+          "prev_date": "4/03",
+          "prev_prev_date": "4/02"
+        },
+        {
+          "symbol": "225570",
+          "name": "Nexon Games",
+          "prev_close": 11360.0,
+          "prev_prev_close": 11440.0,
+          "change_percent": -0.7,
+          "prev_date": "4/03",
+          "prev_prev_date": "4/02"
+        },
+        {
+          "symbol": "263750",
+          "name": "Pearl Abyss",
+          "prev_close": 63200.0,
+          "prev_prev_close": 66200.0,
+          "change_percent": -4.53,
+          "prev_date": "4/03",
+          "prev_prev_date": "4/02"
+        }
+      ],
+      "market_index": {
+        "name": "KOSPI 200",
+        "prev_close": 80575.0,
+        "prev_prev_close": 78190.0,
+        "change_percent": 3.05,
+        "prev_date": "4/03",
+        "prev_prev_date": "4/02"
+      },
+      "ai_analysis": "| 公司 | 新闻内容 |\n|:----:|:-----|\n| 🌐 大盘 | 板块整体小幅下跌，2涨4跌 |\n| 🎮 Shift Up | 2026年04月03日小幅上涨2.33% |\n| 🎮 Krafton | 2026年04月03日微幅下跌1.62% |\n| 🎮 NCsoft | 2026年04月03日微幅下跌0.70% |\n| 🎮 Netmarble | • Netmarble Corp stock: Gaming powerhouse or volatile bet? |\n| 🎮 Nexon Games | • Nexon Co Ltd stock: Why gaming powerhouse draws global inves... |\n| 🎮 Pearl Abyss | 2026年04月03日小幅下跌4.53% |"
+    },
     {
       "date": "2026-04-03",
       "update_time": "2026-04-03 18:05:47",
