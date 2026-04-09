@@ -1,74 +1,143 @@
 {
   "latest": {
-    "date": "2026-04-08",
-    "update_time": "2026-04-08 10:30:37",
+    "date": "2026-04-09",
+    "update_time": "2026-04-09 10:30:35",
     "stocks": [
       {
         "symbol": "462870",
         "name": "Shift Up",
-        "prev_close": 32000.0,
-        "prev_prev_close": 32900.0,
-        "change_percent": -2.74,
-        "prev_date": "4/07",
-        "prev_prev_date": "4/06"
+        "prev_close": 33400.0,
+        "prev_prev_close": 32000.0,
+        "change_percent": 4.38,
+        "prev_date": "4/08",
+        "prev_prev_date": "4/07"
       },
       {
         "symbol": "259960",
         "name": "Krafton",
-        "prev_close": 233000.0,
-        "prev_prev_close": 236500.0,
-        "change_percent": -1.48,
-        "prev_date": "4/07",
-        "prev_prev_date": "4/06"
+        "prev_close": 234000.0,
+        "prev_prev_close": 233000.0,
+        "change_percent": 0.43,
+        "prev_date": "4/08",
+        "prev_prev_date": "4/07"
       },
       {
         "symbol": "036570",
         "name": "NCsoft",
-        "prev_close": 210000.0,
-        "prev_prev_close": 213000.0,
-        "change_percent": -1.41,
-        "prev_date": "4/07",
-        "prev_prev_date": "4/06"
+        "prev_close": 218000.0,
+        "prev_prev_close": 210000.0,
+        "change_percent": 3.81,
+        "prev_date": "4/08",
+        "prev_prev_date": "4/07"
       },
       {
         "symbol": "251270",
         "name": "Netmarble",
-        "prev_close": 48700.0,
-        "prev_prev_close": 49700.0,
-        "change_percent": -2.01,
-        "prev_date": "4/07",
-        "prev_prev_date": "4/06"
+        "prev_close": 50200.0,
+        "prev_prev_close": 48700.0,
+        "change_percent": 3.08,
+        "prev_date": "4/08",
+        "prev_prev_date": "4/07"
       },
       {
         "symbol": "225570",
         "name": "Nexon Games",
-        "prev_close": 11160.0,
-        "prev_prev_close": 11360.0,
-        "change_percent": -1.76,
-        "prev_date": "4/07",
-        "prev_prev_date": "4/06"
+        "prev_close": 11320.0,
+        "prev_prev_close": 11160.0,
+        "change_percent": 1.43,
+        "prev_date": "4/08",
+        "prev_prev_date": "4/07"
       },
       {
         "symbol": "263750",
         "name": "Pearl Abyss",
-        "prev_close": 57400.0,
-        "prev_prev_close": 60200.0,
-        "change_percent": -4.65,
-        "prev_date": "4/07",
-        "prev_prev_date": "4/06"
+        "prev_close": 56500.0,
+        "prev_prev_close": 57400.0,
+        "change_percent": -1.57,
+        "prev_date": "4/08",
+        "prev_prev_date": "4/07"
       }
     ],
     "market_index": {
       "name": "KOSPI 200",
-      "prev_close": 82770.0,
-      "prev_prev_close": 81750.0,
-      "change_percent": 1.25,
-      "prev_date": "4/07",
-      "prev_prev_date": "4/06"
+      "prev_close": 89000.0,
+      "prev_prev_close": 82770.0,
+      "change_percent": 7.53,
+      "prev_date": "4/08",
+      "prev_prev_date": "4/07"
     },
-    "ai_analysis": "| 公司 | 新闻内容 |\n|:----:|:-----|\n| 🌐 大盘 | • Value-up index outperforms KOSPI by 31.8 points; shareholder... |\n| 🎮 Shift Up | 2026年04月07日小幅下跌2.74% |\n| 🎮 Krafton | 2026年04月07日微幅下跌1.48% |\n| 🎮 NCsoft | 2026年04月07日微幅下跌1.41% |\n| 🎮 Netmarble | • Netmarble Corp stock: Gaming giant's diversification play fo... |\n| 🎮 Nexon Games | • Nexon Co Ltd stock: Why gaming powerhouse draws global inves... |\n| 🎮 Pearl Abyss | • Pearl Abyss Corp stock: Why gaming investors watch this Kore... |"
+    "ai_analysis": "| 公司 | 新闻内容 |\n|:----:|:-----|\n| 🌐 大盘 | • Value-up index outperforms KOSPI by 31.8 points; shareholder... |\n| 🎮 Shift Up | • Gabriela Jaquez’s title game heroics boost WNBA draft stock |\n| 🎮 Krafton | 2026年04月08日微幅上涨0.43% |\n| 🎮 NCsoft | 2026年04月08日小幅上涨3.81% |\n| 🎮 Netmarble | • Netmarble Corp stock: Gaming giant's diversification play fo... |\n| 🎮 Nexon Games | 2026年04月08日微幅上涨1.43% |\n| 🎮 Pearl Abyss | 2026年04月08日微幅下跌1.57% |"
   },
   "history": [
+    {
+      "date": "2026-04-08",
+      "update_time": "2026-04-08 10:30:37",
+      "stocks": [
+        {
+          "symbol": "462870",
+          "name": "Shift Up",
+          "prev_close": 32000.0,
+          "prev_prev_close": 32900.0,
+          "change_percent": -2.74,
+          "prev_date": "4/07",
+          "prev_prev_date": "4/06"
+        },
+        {
+          "symbol": "259960",
+          "name": "Krafton",
+          "prev_close": 233000.0,
+          "prev_prev_close": 236500.0,
+          "change_percent": -1.48,
+          "prev_date": "4/07",
+          "prev_prev_date": "4/06"
+        },
+        {
+          "symbol": "036570",
+          "name": "NCsoft",
+          "prev_close": 210000.0,
+          "prev_prev_close": 213000.0,
+          "change_percent": -1.41,
+          "prev_date": "4/07",
+          "prev_prev_date": "4/06"
+        },
+        {
+          "symbol": "251270",
+          "name": "Netmarble",
+          "prev_close": 48700.0,
+          "prev_prev_close": 49700.0,
+          "change_percent": -2.01,
+          "prev_date": "4/07",
+          "prev_prev_date": "4/06"
+        },
+        {
+          "symbol": "225570",
+          "name": "Nexon Games",
+          "prev_close": 11160.0,
+          "prev_prev_close": 11360.0,
+          "change_percent": -1.76,
+          "prev_date": "4/07",
+          "prev_prev_date": "4/06"
+        },
+        {
+          "symbol": "263750",
+          "name": "Pearl Abyss",
+          "prev_close": 57400.0,
+          "prev_prev_close": 60200.0,
+          "change_percent": -4.65,
+          "prev_date": "4/07",
+          "prev_prev_date": "4/06"
+        }
+      ],
+      "market_index": {
+        "name": "KOSPI 200",
+        "prev_close": 82770.0,
+        "prev_prev_close": 81750.0,
+        "change_percent": 1.25,
+        "prev_date": "4/07",
+        "prev_prev_date": "4/06"
+      },
+      "ai_analysis": "| 公司 | 新闻内容 |\n|:----:|:-----|\n| 🌐 大盘 | • Value-up index outperforms KOSPI by 31.8 points; shareholder... |\n| 🎮 Shift Up | 2026年04月07日小幅下跌2.74% |\n| 🎮 Krafton | 2026年04月07日微幅下跌1.48% |\n| 🎮 NCsoft | 2026年04月07日微幅下跌1.41% |\n| 🎮 Netmarble | • Netmarble Corp stock: Gaming giant's diversification play fo... |\n| 🎮 Nexon Games | • Nexon Co Ltd stock: Why gaming powerhouse draws global inves... |\n| 🎮 Pearl Abyss | • Pearl Abyss Corp stock: Why gaming investors watch this Kore... |"
+    },
     {
       "date": "2026-04-07",
       "update_time": "2026-04-07 17:11:29",
