@@ -1,115 +1,115 @@
 {
   "latest": {
-    "date": "2026-04-08",
-    "update_time": "2026-04-08 10:31:31",
+    "date": "2026-04-09",
+    "update_time": "2026-04-09 10:31:30",
     "stocks": [
       {
         "symbol": "0700.HK",
         "name": "腾讯控股",
-        "prev_close": 489.2,
-        "prev_prev_close": 496.6,
-        "change_percent": -1.49,
-        "prev_date": "4/02",
-        "prev_prev_date": "4/01"
+        "prev_close": 508.0,
+        "prev_prev_close": 489.2,
+        "change_percent": 3.84,
+        "prev_date": "4/08",
+        "prev_prev_date": "4/02"
       },
       {
         "symbol": "9988.HK",
         "name": "阿里巴巴",
-        "prev_close": 118.5,
-        "prev_prev_close": 122.7,
-        "change_percent": -3.42,
-        "prev_date": "4/02",
-        "prev_prev_date": "4/01"
+        "prev_close": 126.5,
+        "prev_prev_close": 118.5,
+        "change_percent": 6.75,
+        "prev_date": "4/08",
+        "prev_prev_date": "4/02"
       },
       {
         "symbol": "9999.HK",
         "name": "网易",
-        "prev_close": 174.8,
-        "prev_prev_close": 176.1,
-        "change_percent": -0.74,
-        "prev_date": "4/02",
-        "prev_prev_date": "4/01"
+        "prev_close": 178.6,
+        "prev_prev_close": 174.8,
+        "change_percent": 2.17,
+        "prev_date": "4/08",
+        "prev_prev_date": "4/02"
       },
       {
         "symbol": "1810.HK",
         "name": "小米集团",
-        "prev_close": 30.88,
-        "prev_prev_close": 32.02,
-        "change_percent": -3.56,
-        "prev_date": "4/02",
-        "prev_prev_date": "4/01"
+        "prev_close": 32.76,
+        "prev_prev_close": 30.88,
+        "change_percent": 6.09,
+        "prev_date": "4/08",
+        "prev_prev_date": "4/02"
       },
       {
         "symbol": "9888.HK",
         "name": "百度集团",
-        "prev_close": 108.8,
-        "prev_prev_close": 109.6,
-        "change_percent": -0.73,
-        "prev_date": "4/02",
-        "prev_prev_date": "4/01"
+        "prev_close": 111.6,
+        "prev_prev_close": 108.8,
+        "change_percent": 2.57,
+        "prev_date": "4/08",
+        "prev_prev_date": "4/02"
       },
       {
         "symbol": "0100.HK",
         "name": "MiniMax",
-        "prev_close": 949.5,
-        "prev_prev_close": 1060.0,
-        "change_percent": -10.42,
-        "prev_date": "4/02",
-        "prev_prev_date": "4/01"
+        "prev_close": 999.0,
+        "prev_prev_close": 949.5,
+        "change_percent": 5.21,
+        "prev_date": "4/08",
+        "prev_prev_date": "4/02"
       },
       {
         "symbol": "2513.HK",
         "name": "智谱AI",
-        "prev_close": 779.0,
-        "prev_prev_close": 915.0,
-        "change_percent": -14.86,
-        "prev_date": "4/02",
-        "prev_prev_date": "4/01"
+        "prev_close": 868.5,
+        "prev_prev_close": 779.0,
+        "change_percent": 11.49,
+        "prev_date": "4/08",
+        "prev_prev_date": "4/02"
       },
       {
         "symbol": "0302.HK",
         "name": "中手游",
-        "prev_close": 0.224,
-        "prev_prev_close": 0.234,
-        "change_percent": -4.27,
-        "prev_date": "4/02",
-        "prev_prev_date": "4/01"
+        "prev_close": 0.228,
+        "prev_prev_close": 0.224,
+        "change_percent": 1.79,
+        "prev_date": "4/08",
+        "prev_prev_date": "4/02"
       },
       {
         "symbol": "2400.HK",
         "name": "心动公司",
-        "prev_close": 60.85,
-        "prev_prev_close": 64.25,
-        "change_percent": -5.29,
-        "prev_date": "4/02",
-        "prev_prev_date": "4/01"
+        "prev_close": 63.45,
+        "prev_prev_close": 60.85,
+        "change_percent": 4.27,
+        "prev_date": "4/08",
+        "prev_prev_date": "4/02"
       },
       {
         "symbol": "9626.HK",
         "name": "哔哩哔哩",
-        "prev_close": 178.5,
-        "prev_prev_close": 182.6,
-        "change_percent": -2.25,
-        "prev_date": "4/02",
-        "prev_prev_date": "4/01"
+        "prev_close": 188.9,
+        "prev_prev_close": 178.5,
+        "change_percent": 5.83,
+        "prev_date": "4/08",
+        "prev_prev_date": "4/02"
       },
       {
         "symbol": "1119.HK",
         "name": "创梦天地",
-        "prev_close": 0.455,
-        "prev_prev_close": 0.445,
-        "change_percent": 2.25,
-        "prev_date": "4/02",
-        "prev_prev_date": "4/01"
+        "prev_close": 0.475,
+        "prev_prev_close": 0.455,
+        "change_percent": 4.4,
+        "prev_date": "4/08",
+        "prev_prev_date": "4/02"
       },
       {
         "symbol": "0799.HK",
         "name": "IGG",
-        "prev_close": 3.63,
-        "prev_prev_close": 3.65,
-        "change_percent": -0.55,
-        "prev_date": "4/02",
-        "prev_prev_date": "4/01"
+        "prev_close": 3.62,
+        "prev_prev_close": 3.63,
+        "change_percent": -0.28,
+        "prev_date": "4/08",
+        "prev_prev_date": "4/02"
       }
     ],
     "indices": [
@@ -122,14 +122,139 @@
         "prev_prev_date": "4/01"
       }
     ],
-    "ai_analysis": "| 公司 | 新闻内容 |\n|:----:|:-----|\n| 🌐 大盘 | 恒生指数下跌0.70%。• AI and tech companies drive Hong Kong listings to 5-year hig... |\n| 💻 腾讯控股 | 2026年04月02日微幅下跌1.49% |\n| 💻 阿里巴巴 | 2026年04月02日小幅下跌3.42% |\n| 💻 网易 | 2026年04月02日微幅下跌0.74% |\n| 💻 小米集团 | 2026年04月02日小幅下跌3.56% |\n| 💻 百度集团 | 2026年04月02日微幅下跌0.73% |\n| 💻 MiniMax | 2026年04月02日大幅下跌10.42% |\n| 💻 智谱AI | 2026年04月02日大幅下跌14.86% |\n| 🎮 中手游 | 2026年04月02日小幅下跌4.27% |\n| 🎮 心动公司 | 2026年04月02日明显下跌5.29% |\n| 🎮 哔哩哔哩 | 2026年04月02日小幅下跌2.25% |\n| 🎮 创梦天地 | 2026年04月02日小幅上涨2.25% |\n| 🎮 IGG | 2026年04月02日微幅下跌0.55% |",
-    "holidays": [
-      "2026-04-03",
-      "2026-04-06",
-      "2026-04-07"
-    ]
+    "ai_analysis": "| 公司 | 新闻内容 |\n|:----:|:-----|\n| 🌐 大盘 | 恒生指数下跌0.70%。• HK stocks advance on return from break, tech index surges 5.... |\n| 💻 腾讯控股 | • TENCENT Repurchases 1.979M Shares for HKD1B • Tencent (00700.HK) repurchased 615,000 shares at a cost of H... |\n| 💻 阿里巴巴 | 2026年04月08日明显上涨6.75% |\n| 💻 网易 | 2026年04月08日小幅上涨2.17% |\n| 💻 小米集团 | • 小米集團(01810.HK)回購1,282.36萬股 涉資約3.95億元 |\n| 💻 百度集团 | 2026年04月08日小幅上涨2.57% |\n| 💻 MiniMax | 2026年04月08日明显上涨5.21% |\n| 💻 智谱AI | 2026年04月08日大幅上涨11.49% |\n| 🎮 中手游 | 2026年04月08日微幅上涨1.79% |\n| 🎮 心动公司 | 2026年04月08日小幅上涨4.27% |\n| 🎮 哔哩哔哩 | 2026年04月08日明显上涨5.83% |\n| 🎮 创梦天地 | 2026年04月08日小幅上涨4.40% |\n| 🎮 IGG | 2026年04月08日微幅下跌0.28% |"
   },
   "history": [
+    {
+      "date": "2026-04-08",
+      "update_time": "2026-04-08 10:31:31",
+      "stocks": [
+        {
+          "symbol": "0700.HK",
+          "name": "腾讯控股",
+          "prev_close": 489.2,
+          "prev_prev_close": 496.6,
+          "change_percent": -1.49,
+          "prev_date": "4/02",
+          "prev_prev_date": "4/01"
+        },
+        {
+          "symbol": "9988.HK",
+          "name": "阿里巴巴",
+          "prev_close": 118.5,
+          "prev_prev_close": 122.7,
+          "change_percent": -3.42,
+          "prev_date": "4/02",
+          "prev_prev_date": "4/01"
+        },
+        {
+          "symbol": "9999.HK",
+          "name": "网易",
+          "prev_close": 174.8,
+          "prev_prev_close": 176.1,
+          "change_percent": -0.74,
+          "prev_date": "4/02",
+          "prev_prev_date": "4/01"
+        },
+        {
+          "symbol": "1810.HK",
+          "name": "小米集团",
+          "prev_close": 30.88,
+          "prev_prev_close": 32.02,
+          "change_percent": -3.56,
+          "prev_date": "4/02",
+          "prev_prev_date": "4/01"
+        },
+        {
+          "symbol": "9888.HK",
+          "name": "百度集团",
+          "prev_close": 108.8,
+          "prev_prev_close": 109.6,
+          "change_percent": -0.73,
+          "prev_date": "4/02",
+          "prev_prev_date": "4/01"
+        },
+        {
+          "symbol": "0100.HK",
+          "name": "MiniMax",
+          "prev_close": 949.5,
+          "prev_prev_close": 1060.0,
+          "change_percent": -10.42,
+          "prev_date": "4/02",
+          "prev_prev_date": "4/01"
+        },
+        {
+          "symbol": "2513.HK",
+          "name": "智谱AI",
+          "prev_close": 779.0,
+          "prev_prev_close": 915.0,
+          "change_percent": -14.86,
+          "prev_date": "4/02",
+          "prev_prev_date": "4/01"
+        },
+        {
+          "symbol": "0302.HK",
+          "name": "中手游",
+          "prev_close": 0.224,
+          "prev_prev_close": 0.234,
+          "change_percent": -4.27,
+          "prev_date": "4/02",
+          "prev_prev_date": "4/01"
+        },
+        {
+          "symbol": "2400.HK",
+          "name": "心动公司",
+          "prev_close": 60.85,
+          "prev_prev_close": 64.25,
+          "change_percent": -5.29,
+          "prev_date": "4/02",
+          "prev_prev_date": "4/01"
+        },
+        {
+          "symbol": "9626.HK",
+          "name": "哔哩哔哩",
+          "prev_close": 178.5,
+          "prev_prev_close": 182.6,
+          "change_percent": -2.25,
+          "prev_date": "4/02",
+          "prev_prev_date": "4/01"
+        },
+        {
+          "symbol": "1119.HK",
+          "name": "创梦天地",
+          "prev_close": 0.455,
+          "prev_prev_close": 0.445,
+          "change_percent": 2.25,
+          "prev_date": "4/02",
+          "prev_prev_date": "4/01"
+        },
+        {
+          "symbol": "0799.HK",
+          "name": "IGG",
+          "prev_close": 3.63,
+          "prev_prev_close": 3.65,
+          "change_percent": -0.55,
+          "prev_date": "4/02",
+          "prev_prev_date": "4/01"
+        }
+      ],
+      "indices": [
+        {
+          "name": "恒生指数",
+          "prev_close": 25116.529296875,
+          "prev_prev_close": 25294.029296875,
+          "change_percent": -0.7,
+          "prev_date": "4/02",
+          "prev_prev_date": "4/01"
+        }
+      ],
+      "ai_analysis": "| 公司 | 新闻内容 |\n|:----:|:-----|\n| 🌐 大盘 | 恒生指数下跌0.70%。• AI and tech companies drive Hong Kong listings to 5-year hig... |\n| 💻 腾讯控股 | 2026年04月02日微幅下跌1.49% |\n| 💻 阿里巴巴 | 2026年04月02日小幅下跌3.42% |\n| 💻 网易 | 2026年04月02日微幅下跌0.74% |\n| 💻 小米集团 | 2026年04月02日小幅下跌3.56% |\n| 💻 百度集团 | 2026年04月02日微幅下跌0.73% |\n| 💻 MiniMax | 2026年04月02日大幅下跌10.42% |\n| 💻 智谱AI | 2026年04月02日大幅下跌14.86% |\n| 🎮 中手游 | 2026年04月02日小幅下跌4.27% |\n| 🎮 心动公司 | 2026年04月02日明显下跌5.29% |\n| 🎮 哔哩哔哩 | 2026年04月02日小幅下跌2.25% |\n| 🎮 创梦天地 | 2026年04月02日小幅上涨2.25% |\n| 🎮 IGG | 2026年04月02日微幅下跌0.55% |",
+      "holidays": [
+        "2026-04-03",
+        "2026-04-06",
+        "2026-04-07"
+      ]
+    },
     {
       "date": "2026-04-07",
       "update_time": "2026-04-07 17:14:34",
